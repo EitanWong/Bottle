@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6451086f-b0ef-405a-bdf5-14c1f62545ef" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/GameFramework" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BBEB7FF0-211E-4828-A396-09071D7B541E/92/5611c60e/MathUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/Setting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.3.4/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SettingPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/Data.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OtherPackage/Meshinator/Scripts/Core/Meshinator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResultCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPSShow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/Readers/ES3Reader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/Types/Primitive Types/ES3Type_uint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckBreakPrice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SortAngle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Editor/ToolsWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/Writers/ES3Writer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UITween/Scripts/EasyTween.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/Settings/ES3Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crystal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TouchToPlane.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerGoOutSideCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrystalManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckHeight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9FDC4C51-B0C7-4546-B786-3960F9028656/2d/d810b322/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrystalView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9FDC4C51-B0C7-4546-B786-3960F9028656/30/bdcacb21/GUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19D5BA23-7C6B-4D44-924B-3DF643FAE0EC/4d/f59ae04c/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraTrack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshBreak.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StepCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/Events.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/ES3.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/TrackLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/OpenCV+Unity/Demo/Scripts/FaceProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/OpenCV+Unity/Demo/Face_Detector/FaceDetectorScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/MicSoundCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraTrack.cs" />
+        <option value="$PROJECT_DIR$/Assets/LookAt.cs" />
+        <option value="$PROJECT_DIR$/Assets/ColliderCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/MicInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/OutLine3.shader" />
+        <option value="$PROJECT_DIR$/Assets/Follow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Trigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/StepCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/FPS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SortAngle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TouchToPlane.cs" />
+        <option value="$PROJECT_DIR$/Assets/Meshinator/Documentation/ReadMe.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPSShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/FPSLabel/FPSLabel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StepCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Setting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StepManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshBreak.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Meshinator/Scripts/Utility/Multithreading/ThreadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CheckBreakPrice.cs" />
+        <option value="$PROJECT_DIR$/Assets/Meshinator/Scripts/Core/Meshinator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerGoOutSideCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AutoSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioPlayer1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" />
+        <option value="$USER_HOME$/Library/Application Support/LONE/瓶/SaveData.es3" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraTrack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NetworkTime.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CrystalView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CrystalManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CheckHeight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SettingPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResultCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Events.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Data.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1R8YbBhKrZSDXlucfJ0lTrqQ135" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.environmentSetup" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6451086f-b0ef-405a-bdf5-14c1f62545ef" name="Default Changelist" comment="" />
+      <created>1569050258666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569050258666</updated>
+      <workItem from="1569050260438" duration="9530000" />
+      <workItem from="1569073403687" duration="2203000" />
+      <workItem from="1569081264340" duration="703000" />
+      <workItem from="1569083296421" duration="93000" />
+      <workItem from="1569083529240" duration="785000" />
+      <workItem from="1569123199785" duration="3456000" />
+      <workItem from="1569129198886" duration="15490000" />
+      <workItem from="1569575913017" duration="11722000" />
+      <workItem from="1569645440579" duration="9079000" />
+      <workItem from="1569833477151" duration="18950000" />
+      <workItem from="1569898135914" duration="13640000" />
+      <workItem from="1569940979730" duration="6851000" />
+      <workItem from="1569986144632" duration="19321000" />
+      <workItem from="1570079983150" duration="5309000" />
+      <workItem from="1570103102440" duration="12029000" />
+      <workItem from="1570158956425" duration="12319000" />
+      <workItem from="1570255725299" duration="13889000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

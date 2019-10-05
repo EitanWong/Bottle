@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Papae-AudioManager</name>
+    </assembly>
+    <members>
+        <member name="T:Papae.UnitySDK.Managers.MusicTransition">
+            <summary>
+            What kind of music transition effect is going to take place
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.MusicTransition.Swift">
+            <summary>
+            (None) Immediately play the next one
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.MusicTransition.LinearFade">
+            <summary>
+            (In and Out) Fades out the current music then fades in the next one
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.MusicTransition.CrossFade">
+            <summary>
+            (No silent gaps) Smooth transition from current music to next
+            </summary>
+        </member>
+        <member name="T:Papae.UnitySDK.Managers.BackgroundMusic">
+            <summary>
+            Background music properties for the AudioManager
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.BackgroundMusic.CurrentClip">
+            <summary>
+            The current clip of the background music.
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.BackgroundMusic.NextClip">
+            <summary>
+            The next clip that is about to be played.
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.BackgroundMusic.MusicTransition">
+            <summary>
+            The music transition.
+            </summary>
+        </member>
+        <member name="F:Papae.UnitySDK.Managers.BackgroundMusic.TransitionDuration">
+            <summary>
+            The duration of the transition.
+            </summary>
+        </member>
+        <member name="T:Papae.UnitySDK.Managers.SoundEffect">
+            <summary>
+            Structure and properties for a sound effect
+            </summary>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Name">
+            <summary>
+            Gets or sets the name of the sound effect.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Length">
+            <summary>
+            Gets the length of the sound effect in seconds.
+            </summary>
+            <value>The length.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.PlaybackPosition">
+            <summary>
+            Gets the playback position in seconds.
+            </summary>
+            <value>The playback position.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Source">
+            <summary>
+            Gets or sets the source of the sound effect.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.OriginalVolume">
+            <summary>
+            Gets or sets the original volume of the sound effect.
+            </summary>
+            <value>The original volume.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Duration">
+            <summary>
+            Gets or sets the duration for the sound effect to play in seconds.
+            </summary>
+            <value>The duration.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Time">
+            <summary>
+            Gets or sets the time left or remaining for the sound effect to play in seconds.
+            </summary>
+            <value>The duration.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.NormalisedTime">
+            <summary>
+            Gets the normalised time left for the sound effect to play.
+            </summary>
+            <value>The normalised time.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Callback">
+            <summary>
+            Gets or sets the callback that would fire when the sound effect finishes playing.
+            </summary>
+            <value>The callback.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.SoundEffect.Singleton">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Papae.UnitySDK.Managers.SoundEffect"/> is a singleton.
+            Meaning that only one instance of the sound effect is ever allowed to be active.
+            </summary>
+            <value><c>true</c> if repeat; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Papae.UnitySDK.Managers.AudioManager">
+            <summary>
+            The manager of all things with regards to sound
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.#ctor">
+            <summary>
+            Prevent calling the consructor of the AudioManager
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.OnDestroy">
+            <summary>
+            Inherited Monobehavior Function.
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.OnApplicationExit">
+            <summary>
+            When your application quits, it destroys objects in a random order.
+            In principle, you shouldn't get to calll the AudioManager when your application quits or is quitting.
+            If any script calls Instance after it has been destroyed, it will create a buggy ghost object that will stay on the Editor scene
+            So, this was made to be sure we're not creating that buggy ghost object.
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.Initialise">
+            <summary>
+            AudioManager initialisation tasks
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.Awake">
+            <summary>
+            Inherited Monobehavior Function.
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.Start">
+            <summary>
+            Inherited Monobehavior Function.
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ConfigureAudioSource(UnityEngine.AudioSource)">
+            <summary>
+            Creates an audio source with 2D music settings based on some internal properties
+            </summary>
+            <returns>An AudioSource with 2D features</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ManageSoundEffects">
+            <summary>
+            Manages each sound effect in the sound effect pool
+            Called during OnUpdate
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.IsMusicAltered">
+            <summary>
+            Returns true, if the music volume or the music mute status been changed
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.IsSoundFxAltered">
+            <summary>
+            Returns true, if the sound effect volume or the sound effect mute status been changed
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.CrossFadeBackgroundMusic">
+            <summary>
+            Performs an overlapping play on the current music to produce a smooth transition from one music to another.
+            As the current music decreases, the next music increases to eventually overlap and overshadow it
+            In short, it hides any silent gaps that could occur during fading in and fading out
+            Also known as gapless playback.
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.FadeOutFadeInBackgroundMusic">
+            <summary>
+            Gradually increases or decreases the volume of the background music
+            Fade Out occurs by gradually reducing the volume of the current music, such that it goes from the original volume to absolute silence
+            Fade In occurs by gradually increasing the volume of the next music, such that it goes from absolute silence to the original volume
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.OnUpdate">
+            <summary>
+            Update function called every frame
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayMusicFromSource(UnityEngine.AudioSource@,UnityEngine.AudioClip,System.Single,System.Single)">
+            <summary>
+            Plays a clip from the specified audio source.
+            Creates and assigns an audio source component if the refrence is null.
+            </summary>
+            <param name="audio_source">Reference to the audio source / channel</param>
+            <param name="clip">The audio data to play</param>
+            <param name="playback_position">Play position of the clip.</param>
+            <param name="pitch">Pitch level of the clip.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBackgroundMusic(UnityEngine.AudioClip,System.Single,System.Single)">
+            <summary>
+            Plays the current audio clip from the music source of the background music
+            </summary>
+            <param name="clip">The audio data to play</param>
+            <param name="playback_position">Play position of the clip</param>
+            <param name="pitch">Pitch level of the clip.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(UnityEngine.AudioClip,Papae.UnitySDK.Managers.MusicTransition,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Plays a background music. 
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip">The audio data to play</param>
+            <param name="transition">How should the music change from the current to the next </param>
+            <param name="transition_duration">Time in secs it takes to transition.</param>
+            <param name="volume">Playback volume.</param>
+            <param name="pitch">Pitch level of the clip.</param>
+            <param name="playback_position">Play position of the clip.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(UnityEngine.AudioClip,Papae.UnitySDK.Managers.MusicTransition,System.Single,System.Single)">
+            <summary>
+            Plays a background music. 
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip">The audio data to play</param>
+            <param name="transition">How should the music change from the current to the next.</param>
+            <param name="transition_duration">Time in secs it takes to transition.</param>
+            <param name="volume">Playback volume.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(UnityEngine.AudioClip,Papae.UnitySDK.Managers.MusicTransition,System.Single)">
+            <summary>
+            Plays a background music.
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip">The audio data to play</param>
+            <param name="transition">How should the music change from the current to the next.</param>
+            <param name="transition_duration">Time in secs it takes to transition.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(UnityEngine.AudioClip,Papae.UnitySDK.Managers.MusicTransition)">
+            <summary>
+            Plays a background music.
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip">The audio data to play</param>
+            <param name="transition">How should the music change from the current to the next. Use MusicTransition to specify type </param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(UnityEngine.AudioClip)">
+            <summary>
+            Plays a background music using the swift the transition mode.
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip">The audio data to play</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(System.String,Papae.UnitySDK.Managers.MusicTransition,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Plays a background music. 
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip_path">Path name of the target clip from the Resources folder</param>
+            <param name="transition">How should the music change from the current to the next.</param>
+            <param name="transition_duration">Time in secs it takes to transition.</param>
+            <param name="volume">Playback volume.</param>
+            <param name="pitch">Pitch level of the clip.</param>
+            <param name="playback_position">Play position of the clip.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(System.String,Papae.UnitySDK.Managers.MusicTransition,System.Single,System.Single)">
+            <summary>
+            Plays a background music. 
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip_path">Path name of the target clip from the Resources folder</param>
+            <param name="transition">How should the music change from the current to the next.</param>
+            <param name="transition_duration">Time in secs it takes to transition.</param>
+            <param name="volume">Playback volume.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(System.String,Papae.UnitySDK.Managers.MusicTransition,System.Single)">
+            <summary>
+            Plays a background music.
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip_path">Path name of the target clip from the Resources folder</param>
+            <param name="transition">How should the music change from the current to the next.</param>
+            <param name="transition_duration">Time in secs it takes to transition.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(System.String,Papae.UnitySDK.Managers.MusicTransition)">
+            <summary>
+            Plays a background music.
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip_path">Path name of the target clip from the Resources folder</param>
+            <param name="transition">How should the music change from the current to the next. Use MusicTransition to specify type </param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayBGM(System.String)">
+            <summary>
+            Plays a background music using the swift the transition mode.
+            Only one background music can be active at a time.
+            </summary>
+            <param name="clip_path">Path name of the target clip from the Resources folder</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.StopBGM">
+            <summary>
+            Stops the playing background music
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PauseBGM">
+            <summary>
+            Pauses the playing background music
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ResumeBGM">
+            <summary>
+            Resumes the playing background music
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.CreateSoundFx(UnityEngine.AudioClip,UnityEngine.Vector2)">
+            <summary>
+            Inner function used to play all resulting sound effects.
+            Initialises some particular properties for the sound effect.
+            </summary>
+            <param name="audio_clip">The audio data to play</param>
+            <param name="location">World location of the audio clip.</param>
+            <returns>Newly created gameobject with sound effect and audio source attached</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.IndexOfSoundFxPool(System.String,System.Boolean)">
+            <summary>
+            Returns the index of a sound effect in pool if one exists.
+            </summary>
+            <param name="name">The name of the sound effect.</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <returns>Index of sound effect or -1 is none exists</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlaySFX(UnityEngine.AudioClip,UnityEngine.Vector2,System.Single,System.Single,System.Boolean,System.Single,System.Action)">
+            <summary>
+            Plays a sound effect for a duration of time at a given location in world space and calls the specified callback function after the time is over.
+            </summary>
+            <returns>An audiosource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="location">World location of the clip</param>
+            <param name="duration">The length in time the clip should play</param>
+            <param name="volume">Playback volume.</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <param name="pitch">Pitch level of the clip.</param>
+            <param name="callback">Action callback to be invoked after the sound has finished.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlaySFX(UnityEngine.AudioClip,UnityEngine.Vector2,System.Single,System.Boolean,System.Action)">
+            <summary>
+            Plays a sound effect for a duration of time at a given location in world space and calls the specified callback function after the time is over
+            </summary>
+            <returns>An audiosource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="location">World location of the clip</param>
+            <param name="duration">The length in time the clip should play</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <param name="callback">Action callback to be invoked after the sound has finished.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlaySFX(UnityEngine.AudioClip,System.Single,System.Boolean,System.Action)">
+            <summary>
+            Plays a sound effect for a duration of time and calls the specified callback function after the time is over
+            </summary>
+            <returns>An audiosource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="duration">The length in time the clip should play</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <param name="callback">Action callback to be invoked after the sound has finished.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.RepeatSFX(UnityEngine.AudioClip,UnityEngine.Vector2,System.Int32,System.Single,System.Boolean,System.Single,System.Action)">
+            <summary>
+            Repeats a sound effect for a specified amount of times at a given location in world space and calls the specified callback function after the sound is over.
+            </summary>
+            <returns>An audiosource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="location">World location of the clip</param>
+            <param name="repeat">How many times in successions you want the clip to play. To loop forever, set as a negative number</param>
+            <param name="volume">Playback volume.</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <param name="pitch">Pitch level of the clip.</param>
+            <param name="callback">Action callback to be invoked after the sound has finished.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.RepeatSFX(UnityEngine.AudioClip,UnityEngine.Vector2,System.Int32,System.Boolean,System.Action)">
+            <summary>
+            Repeats a sound effect for a specified amount of times at a given location in world space and calls the specified callback function after the sound is over.
+            </summary>
+            <returns>An audiosource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="location">World location of the clip</param>
+            <param name="repeat">How many times in successions you want the clip to play. To loop forever, set as a negative number</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <param name="callback">Action callback to be invoked after the sound has finished.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.RepeatSFX(UnityEngine.AudioClip,System.Int32,System.Boolean,System.Action)">
+            <summary>
+            Repeats a sound effect for a specified amount of times at a given location in world space and calls the specified callback function after the sound is over.
+            </summary>
+            <returns>An audiosource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="repeat">How many times in successions you want the clip to play. To loop forever, set as a negative number</param>
+            <param name="singleton">Is the sound effect a singleton.</param>
+            <param name="callback">Action callback to be invoked after the sound has finished.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayOneShot(UnityEngine.AudioClip,UnityEngine.Vector2,System.Single,System.Single,System.Action)">
+            <summary>
+            Plays a sound effect once at a location in world space and calls the specified callback function after the sound is over
+            </summary>
+            <returns>An AudioSource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="location">World location of the clip</param>
+            <param name="volume">Playback volume.</param>
+            <param name="pitch">Pitch level of the clip.</param>
+            <param name="callback">Action callback to be invoked after clip has finished playing</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayOneShot(UnityEngine.AudioClip,UnityEngine.Vector2,System.Action)">
+            <summary>
+            Plays a sound effect once at a location in world space
+            </summary>
+            <returns>An AudioSource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="location">World location of the clip</param>
+            <param name="callback">Action callback to be invoked after clip has finished playing</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PlayOneShot(UnityEngine.AudioClip,System.Action)">
+            <summary>
+            Plays a sound effect once and calls the specified callback function after the sound is over
+            </summary>
+            <returns>An AudioSource</returns>
+            <param name="clip">The audio data to play</param>
+            <param name="callback">Action callback to be invoked after clip has finished playing</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.PauseAllSFX">
+            <summary>
+            Pauses all the sound effects in the game
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ResumeAllSFX">
+            <summary>
+            Resumes all the sound effect in the game
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.StopAllSFX">
+            <summary>
+            Stops all the sound effects in the game
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadClip(System.String,System.Boolean)">
+            <summary>
+            Loads an AudioClip from the Resources folder
+            </summary>
+            <param name="path">Path name of the target clip from the Resources folder</param>
+            <param name="add_to_playlist">Option to add loaded clip into the playlist for future reference</param>
+            <returns>The Audioclip from the resource folder</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadClip(System.String,UnityEngine.AudioType,System.Boolean,System.Action{UnityEngine.AudioClip})">
+            <summary>
+            Loads an AudioClip from the specified url path.
+            </summary>
+            <param name="path">The url path of the audio clip to download. For example: 'http://www.my-server.com/audio.ogg'</param>
+            <param name="audio_type">The type of audio encoding for the downloaded clip. See AudioType</param>
+            <param name="add_to_playlist">Option to add loaded clip into the playlist for future reference</param>
+            <param name="callback">Action callback to be invoked after clip has finished loading</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadAudioClipFromUrl(System.String,UnityEngine.AudioType,System.Action{UnityEngine.AudioClip})">
+            <summary>
+            Loads the audio clip from URL.
+            </summary>
+            <returns>The audio clip from URL.</returns>
+            <param name="audio_url">Audio URL.</param>
+            <param name="audio_type">Audio type.</param>
+            <param name="callback">Callback.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ToggleMute(System.Boolean)">
+            <summary>
+            Toggles the mater mute that controls both background music and sound effect mute.
+            </summary>
+            <param name="flag">New toggle state of the mute controller.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ToggleBGMMute(System.Boolean)">
+            <summary>
+            Toggles the background music mute.
+            </summary>
+            <param name="flag">New toggle state of the background music controller.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ToggleSFXMute(System.Boolean)">
+            <summary>
+            Toggles the sound effect mute.
+            </summary>
+            <param name="flag">New toggle state of the sound effect controller.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.SetBGMVolume(System.Single)">
+            <summary>
+            Sets the background music volume.
+            </summary>
+            <param name="volume">New volume of the background music.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.SetSFXVolume(System.Single)">
+            <summary>
+            Sets the volume of the sound effects.
+            </summary>
+            <param name="volume">New volume for all the sound effects.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.NormaliseVolume(System.Single)">
+            <summary>
+            Normalises the volume so that it can be in a range of [0 - 1] to suit the music source volume and the AudioManager volume
+            </summary>
+            <returns>The normalised volume between the range of zero and one.</returns>
+            <param name="vol">Vol.</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadBGMVolume">
+            <summary>
+            Get the volume of the background music from disk
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadSFXVolume">
+            <summary>
+            Get the volume of the sound effect from disk
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ToBool(System.Int32)">
+            <summary>
+            Converts the integer value to a boolean representative value
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadBGMMuteStatus">
+            <summary>
+            Get the mute or disabled status of the background music from disk
+            </summary>
+            <returns>Returns the value of the background music mute key from the saved preferences if it exists or the defaut value if it does not</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadSFXMuteStatus">
+            <summary>
+            Get the mute or disabled status of the sound effect from disk
+            </summary>
+            <returns>Returns the value of the sound effect mute key from the saved preferences if it exists or the defaut value if it does not</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.SaveBGMPreferences">
+            <summary>
+            Stores the volume and the mute status of the background music to disk.
+            Note that all preferences would automatically get saved when this script gets destroyed 
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.SaveSFXPreferences">
+            <summary>
+            Stores the volume and the mute status of the sound effect to disk.
+            Note that all preferences would automatically get saved when this script gets destroyed
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.ClearAllPreferences">
+            <summary>
+            Removes all key and value pertaining to sound options from disk
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.SaveAllPreferences">
+            <summary>
+            Writes all modified sound options or preferences to disk
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.EmptyPlaylist">
+            <summary>
+            Clear the list of audio clips
+            </summary>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.AddToPlaylist(UnityEngine.AudioClip)">
+            <summary>
+            Add a sound clip to list of audio clips
+            </summary>
+            <param name="clip">Sound clip data</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.RemoveFromPlaylist(UnityEngine.AudioClip)">
+            <summary>
+            Add a sound clip to asset list pool
+            </summary>
+            <param name="clip">Sound clip data</param>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.GetClipFromPlaylist(System.String)">
+            <summary>
+            Gets the AudioClip reference from the name supplied 
+            </summary>
+            <param name="clip_name">The name of the clip in the asset list pool </param>
+            <returns>The AudioClip from the pool or null if no matching name can be found</returns>
+        </member>
+        <member name="M:Papae.UnitySDK.Managers.AudioManager.LoadPlaylist(System.String,System.Boolean)">
+            <summary>
+            Load all sound clips from the Resources folder path into the asset list pool
+            </summary>
+            <param name="path">Pathname of the target folder. When using the empty string (i.e, ""), the function will load the entire audio clip content(s) of the resource folder</param>
+            <param name="overwrite">Overwrites the current content(s) of the playlist.</param>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.Instance">
+            <summary>
+            Current and only running instance of the AudioManager
+            </summary>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.CurrentMusicClip">
+            <summary>
+            Gets the current music clip.
+            </summary>
+            <value>The current music clip.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.SoundFxPool">
+            <summary>
+            Current list or pool of the sound effects
+            </summary>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.Playlist">
+            <summary>
+            List of audio clips attached to the AudioManager
+            </summary>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.IsMusicPlaying">
+            <summary>
+            Is the AudioManager processing any background music
+            </summary>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.MusicVolume">
+            <summary>
+            Gets or sets the music volume.
+            </summary>
+            <value>The music volume.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.SoundVolume">
+            <summary>
+            Gets or sets the sound volume.
+            </summary>
+            <value>The sound volume.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.IsMusicOn">
+            <summary>
+            Gets or sets a value indicating whether the music is on.
+            </summary>
+            <value><c>true</c> if this instance is music on; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.IsSoundOn">
+            <summary>
+            Gets or sets a value indicating whether the sound is on.
+            </summary>
+            <value><c>true</c> if this instance is sound on; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Papae.UnitySDK.Managers.AudioManager.IsMasterMute">
+            <summary>
+            Gets or sets a value indicating whether this instance is master mute.
+            </summary>
+            <value><c>true</c> if this instance is master mute; otherwise, <c>false</c>.</value>
+        </member>
+    </members>
+</doc>

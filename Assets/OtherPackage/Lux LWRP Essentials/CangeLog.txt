@@ -1,0 +1,165 @@
+
+## Version 1.15
+
+### Added:
+- Package containing tweaked shaders for URP 7.1.2.
+
+### Fixed:
+- Alebdo meta pass for Clear Coat shadergraph fixed.
+
+## Version 1.14
+
+### Added:
+- Added single pass stereo support for shaders using the camera depth and opaque texture.
+- Tree Creator shaders added.
+
+## Version 1.13
+
+### Added:
+- Glass shader: Proper shadows added for directional lights. No depth write only object needed anymore.
+- Custom node for Shader Graph added: Transparent lighting.
+
+### Changed
+
+- Documentation of how to setup complex glass materials. Please visit it again.
+
+## Version 1.121
+
+### Added
+- Toon outline shader: Added option to scale outline width by object size.
+
+## Version 1.12
+
+### Added
+- Custom nodes for Shader Graph added:
+
+- - Charlie Sheen, GGX anisotropic and clear coat lighting added.
+- - Helper nodes added: Double sided normalTS and Metallic Albedo to Specular Albedo.
+
+### Fixed
+- Custom Transmission Lighting node: Occlusion fixed.
+- Clear Coat Lighting: Wrong NdotL for clear coat layer fixed.
+
+
+## Version 1.11
+
+### Added
+- Custom nodes for Shader Graph added: Toon lighting and transmission.
+
+## Version 1.1
+
+### Added
+- Lit particles shaders added. 
+
+## Version 1.09
+
+### Added
+- Glass shader added. 
+
+### Fixed: 
+- Hair Shader: Mask Map label and description fixed.
+- Decal.cs: Fixed minor serialization issue.
+
+### Changed
+- Hair Blend Shader: ZTest parameter exposed.
+- Hair and beard materials: HD version added.
+
+## Version 1.08
+
+### Added
+- Transmission shader added.
+
+### Changed
+- Shader GUI reworked to better match the built in one.
+- "Subsurface scattering" renamed to "Transmission" to better fit the HDRP terminology.
+- Clear Coat BRDF optimized.
+- Shader inputs cleaned up.
+- Custom shader GUI scripts updated.
+
+### Fixed
+- Lit Extended Shader: Missing #pragma shader_feature _Emission added.
+- Skin Shader: Incorrect diffuse normal sampling on Android fixed.
+
+## Version 1.07
+
+### Added
+- Cloth shader
+- Clear Coat shader
+
+### Changed
+- Subsurface Scattering renamed to Transmission to better fit the terminology used in HDRP.
+- Transmission: Distortion exposed.
+- Custom lighting functions cleaned up.
+
+## Version 1.06
+
+### Added
+- Billboard shader
+
+## Version 1.051
+
+### Fixed
+- Hair Shader: Issues with unity 2019.2 and LWRP 6.x
+
+### Changed
+- LuxLWRPCustomSingleSidedShaderGUI: Sets _MainTex to make Selection Outline work
+
+## Version 1.05
+
+### Added
+- Hair shader
+
+### Changed
+- Outline Shader: Culling property added
+
+### Fixed
+- Skin Shader: Stencil Ref value
+
+## Version 1.04
+
+### Added
+- Skin shader
+
+## Version 1.03
+
+### Added
+- Foliage shader
+
+### Changed
+- Water shader: Lighting uses some floats instead of halfs to fix lighting issues on some platforms (like URP)
+- LuxLWRP_GrassMeshPostprocessor script: Support for foliage meshes
+
+## Version 1.021
+
+### Added
+- Decal Shaders: Distance based fading
+- Decal Shaders: HDR color input
+- Decal Lit Shader: Support for normal and mask map
+- Decal Lit Shader: Advanced lighting options
+
+### Changed
+- Decal script: Allows to align the decal to the underlying normal
+
+### Fixed
+- Water Shader: Refraction and OpenGL Core
+
+## Version 1.02
+
+### Added
+- Decal shaders and scripts
+
+### Changed
+- Stencil buffer options extended
+- Outline materials adjusted to stencil buffer options
+
+## Version 1.01
+
+### Added
+- Fast Outline Shader
+- Lit Extended Shader
+
+## Changed
+- ExtendedFlycam.cs: Added ability to lock/unlock camera hitting space
+
+## Version 1.0
+First release

@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: atmo
+  m_Shader: {fileID: 4800000, guid: 49598ff5c7e6ae349be156d3e2e66352, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - displayTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - orbxUid: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &114269896814921434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1532797627, guid: f654ca2983870b74ea8b9a258e509846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OctaneXML: "<?xml version='1.0' encoding='utf-8'?>\n<OCS2 version='5000013'>\n <graph
+    id='1' type='1' name='Root'>\n  <node id='3' type='78' name='Mesh UV projection'
+    position='61.111099 -104.846'>\n   <pin name='uvSet'>\n    <node id='4' type='9'>\n
+    \    <attr name='value' type='4'>1 0 0</attr>\n    </node>\n   </pin>\n  </node>\n
+    \ <node id='5' type='67' name='Transform value' position='-82.810204 -104.846'>\n
+    \  <attr name='rotationOrder' type='2'>2</attr>\n   <attr name='rotation' type='8'>0
+    0 0</attr>\n   <attr name='scale' type='8'>0.053249501 0.053249501 0.053249501</attr>\n
+    \  <attr name='translation' type='8'>0 0 0</attr>\n  </node>\n  <node id='6' type='78'
+    name='Mesh UV projection' position='344.69 -104.846'>\n   <pin name='uvSet'>\n
+    \   <node id='7' type='9'>\n     <attr name='value' type='4'>1 0 0</attr>\n    </node>\n
+    \  </pin>\n  </node>\n  <node id='8' type='67' name='Transform value' position='202.19
+    -104.846'>\n   <attr name='rotationOrder' type='2'>2</attr>\n   <attr name='rotation'
+    type='8'>0 0 0</attr>\n   <attr name='scale' type='8'>0.25943899 0.25943899 0.25943899</attr>\n
+    \  <attr name='translation' type='8'>0 0 0</attr>\n  </node>\n  <node id='9' type='87'
+    name='Noise texture' position='25.9398 -4.84585'>\n   <pin name='noiseType'>\n
+    \   <node id='10' type='57'>\n     <attr name='value' type='2'>1</attr>\n    </node>\n
+    \  </pin>\n   <pin name='octaves'>\n    <node id='11' type='9'>\n     <attr name='value'
+    type='4'>16 0 0</attr>\n    </node>\n   </pin>\n   <pin name='omega'>\n    <node
+    id='12' type='6'>\n     <attr name='value' type='8'>0.5 0 0</attr>\n    </node>\n
+    \  </pin>\n   <pin name='transform' connect='5'/>\n   <pin name='projection' connect='3'/>\n
+    \  <pin name='invert'>\n    <node id='13' type='11'>\n     <attr name='value'
+    type='1'>1</attr>\n    </node>\n   </pin>\n   <pin name='gamma'>\n    <node id='14'
+    type='6'>\n     <attr name='value' type='8'>1 0 0</attr>\n    </node>\n   </pin>\n
+    \  <pin name='contrast'>\n    <node id='15' type='6'>\n     <attr name='value'
+    type='8'>6.3506298 0 0</attr>\n    </node>\n   </pin>\n  </node>\n  <node id='16'
+    type='22' name='Turbulence texture' position='225.94 -4.84585'>\n   <pin name='power'>\n
+    \   <node id='17' type='31'>\n     <attr name='value' type='6'>1</attr>\n    </node>\n
+    \  </pin>\n   <pin name='offset'>\n    <node id='18' type='31'>\n     <attr name='value'
+    type='6'>0</attr>\n    </node>\n   </pin>\n   <pin name='octaves'>\n    <node
+    id='19' type='9'>\n     <attr name='value' type='4'>2 0 0</attr>\n    </node>\n
+    \  </pin>\n   <pin name='omega'>\n    <node id='20' type='31'>\n     <attr name='value'
+    type='6'>0.88339198</attr>\n    </node>\n   </pin>\n   <pin name='transform' connect='8'/>\n
+    \  <pin name='projection' connect='6'/>\n   <pin name='turbulence'>\n    <node
+    id='21' type='11'>\n     <attr name='value' type='1'>1</attr>\n    </node>\n   </pin>\n
+    \  <pin name='invert'>\n    <node id='22' type='11'>\n     <attr name='value'
+    type='1'>0</attr>\n    </node>\n   </pin>\n   <pin name='gamma'>\n    <node id='23'
+    type='6'>\n     <attr name='value' type='8'>1 0 0</attr>\n    </node>\n   </pin>\n
+    \ </node>\n  <node id='24' type='16' name='atmo' position='130.94 96.575104'>\n
+    \  <pin name='diffuse'>\n    <node id='25' type='33'>\n     <attr name='value'
+    type='8'>0.89999998 0.89999998 0.89999998</attr>\n    </node>\n   </pin>\n   <pin
+    name='specular'>\n    <node id='26' type='33'>\n     <attr name='value' type='8'>0.125967
+    0.089960903 0.064089604</attr>\n    </node>\n   </pin>\n   <pin name='brdf'>\n
+    \   <node id='27' type='57'>\n     <attr name='value' type='2'>0</attr>\n    </node>\n
+    \  </pin>\n   <pin name='roughness'>\n    <node id='28' type='31'>\n     <attr
+    name='value' type='6'>1</attr>\n    </node>\n   </pin>\n   <pin name='anisotropy'>\n
+    \   <node id='29' type='6'>\n     <attr name='value' type='8'>0 0 0</attr>\n    </node>\n
+    \  </pin>\n   <pin name='rotation'>\n    <node id='30' type='31'>\n     <attr
+    name='value' type='6'>0</attr>\n    </node>\n   </pin>\n   <pin name='sheen'>\n
+    \   <node id='31' type='33'>\n     <attr name='value' type='8'>0 0 0</attr>\n
+    \   </node>\n   </pin>\n   <pin name='sheenRoughness'>\n    <node id='32' type='31'>\n
+    \    <attr name='value' type='6'>1</attr>\n    </node>\n   </pin>\n   <pin name='index'>\n
+    \   <node id='33' type='6'>\n     <attr name='value' type='8'>1 0 0</attr>\n    </node>\n
+    \  </pin>\n   <pin name='bump' connect='9'/>\n   <pin name='opacity' connect='16'/>\n
+    \  <pin name='smooth'>\n    <node id='34' type='11'>\n     <attr name='value'
+    type='1'>1</attr>\n    </node>\n   </pin>\n   <pin name='edgesRounding'>\n    <node
+    id='35' type='6'>\n     <attr name='value' type='8'>0 0 0</attr>\n    </node>\n
+    \  </pin>\n   <pin name='filmwidth'>\n    <node id='36' type='31'>\n     <attr
+    name='value' type='6'>0</attr>\n    </node>\n   </pin>\n   <pin name='filmindex'>\n
+    \   <node id='37' type='6'>\n     <attr name='value' type='8'>1.15123 0 0</attr>\n
+    \   </node>\n   </pin>\n  </node>\n  <node id='2' type='30007' name='Material
+    out' position='148 172.5'>\n   <attr name='group' type='10'></attr>\n   <attr
+    name='description' type='10'></attr>\n   <pin name='input' connect='24'/>\n  </node>\n
+    </graph>\n</OCS2>\n"
+  Textures: []

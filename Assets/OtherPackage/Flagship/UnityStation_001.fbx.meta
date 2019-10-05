@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: fd88621bbb6c3554b9849d6df3ff0f3d
+timeCreated: 1512420609
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: BottomLightRows_Instance
+    100002: BottomLightRows_Instance1
+    100004: BottomLightRows_Instance_2
+    100006: BottomLightRows_Instance_3
+    100008: Hangar
+    100010: HANGAR_ENTRANCE
+    100012: HangarDoor
+    100014: HangarDoor_Light
+    100016: LIGHTS_BOTTOM
+    100018: LIGHTS_MID
+    100020: LIGHTS_POST_TIPS
+    100022: OuterRibs_Mid
+    100024: Plane
+    100026: Plane 1
+    100028: Plane_1
+    100030: Plane_1 1
+    100032: Plane_10
+    100034: Plane_1_10
+    100036: Plane_1_4
+    100038: Plane_1_4 1
+    100040: Plane_1_5
+    100042: Plane_1_6
+    100044: Plane_1_7
+    100046: Plane_1_8
+    100048: Plane_1_9
+    100050: Plane_2
+    100052: Plane_2 1
+    100054: Plane_2_10
+    100056: Plane_2_11
+    100058: Plane_2_5
+    100060: Plane_2_5 1
+    100062: Plane_2_6
+    100064: Plane_2_7
+    100066: Plane_2_8
+    100068: Plane_2_9
+    100070: Plane_4
+    100072: Plane_4 1
+    100074: Plane_5
+    100076: Plane_6
+    100078: Plane_7
+    100080: Plane_8
+    100082: Plane_9
+    100084: POST_LOWER
+    100086: Post_Lower_Light
+    100088: POST_UPPER
+    100090: Post_Upper_Light
+    100092: POSTS_MID
+    100094: PostUpper_1
+    100096: PostUpper_2
+    100098: PostUpper_2_Light
+    100100: SHIP_MAIN
+    100102: ShipSides
+    100104: ShipTop_Bottom
+    100106: STATION
+    100108: Station_Strut
+    100110: StationCore
+    100112: //RootNode
+    400000: BottomLightRows_Instance
+    400002: BottomLightRows_Instance1
+    400004: BottomLightRows_Instance_2
+    400006: BottomLightRows_Instance_3
+    400008: Hangar
+    400010: HANGAR_ENTRANCE
+    400012: HangarDoor
+    400014: HangarDoor_Light
+    400016: LIGHTS_BOTTOM
+    400018: LIGHTS_MID
+    400020: LIGHTS_POST_TIPS
+    400022: OuterRibs_Mid
+    400024: Plane
+    400026: Plane 1
+    400028: Plane_1
+    400030: Plane_1 1
+    400032: Plane_10
+    400034: Plane_1_10
+    400036: Plane_1_4
+    400038: Plane_1_4 1
+    400040: Plane_1_5
+    400042: Plane_1_6
+    400044: Plane_1_7
+    400046: Plane_1_8
+    400048: Plane_1_9
+    400050: Plane_2
+    400052: Plane_2 1
+    400054: Plane_2_10
+    400056: Plane_2_11
+    400058: Plane_2_5
+    400060: Plane_2_5 1
+    400062: Plane_2_6
+    400064: Plane_2_7
+    400066: Plane_2_8
+    400068: Plane_2_9
+    400070: Plane_4
+    400072: Plane_4 1
+    400074: Plane_5
+    400076: Plane_6
+    400078: Plane_7
+    400080: Plane_8
+    400082: Plane_9
+    400084: POST_LOWER
+    400086: Post_Lower_Light
+    400088: POST_UPPER
+    400090: Post_Upper_Light
+    400092: POSTS_MID
+    400094: PostUpper_1
+    400096: PostUpper_2
+    400098: PostUpper_2_Light
+    400100: SHIP_MAIN
+    400102: ShipSides
+    400104: ShipTop_Bottom
+    400106: STATION
+    400108: Station_Strut
+    400110: StationCore
+    400112: //RootNode
+    2300000: Hangar
+    2300002: HangarDoor
+    2300004: HangarDoor_Light
+    2300006: OuterRibs_Mid
+    2300008: Plane
+    2300010: Plane 1
+    2300012: Plane_1
+    2300014: Plane_1 1
+    2300016: Plane_10
+    2300018: Plane_1_10
+    2300020: Plane_1_4
+    2300022: Plane_1_4 1
+    2300024: Plane_1_5
+    2300026: Plane_1_6
+    2300028: Plane_1_7
+    2300030: Plane_1_8
+    2300032: Plane_1_9
+    2300034: Plane_2
+    2300036: Plane_2 1
+    2300038: Plane_2_10
+    2300040: Plane_2_11
+    2300042: Plane_2_5
+    2300044: Plane_2_5 1
+    2300046: Plane_2_6
+    2300048: Plane_2_7
+    2300050: Plane_2_8
+    2300052: Plane_2_9
+    2300054: Plane_4
+    2300056: Plane_4 1
+    2300058: Plane_5
+    2300060: Plane_6
+    2300062: Plane_7
+    2300064: Plane_8
+    2300066: Plane_9
+    2300068: POST_LOWER
+    2300070: Post_Lower_Light
+    2300072: Post_Upper_Light
+    2300074: POSTS_MID
+    2300076: PostUpper_1
+    2300078: PostUpper_2
+    2300080: PostUpper_2_Light
+    2300082: ShipSides
+    2300084: ShipTop_Bottom
+    2300086: Station_Strut
+    2300088: StationCore
+    3300000: Hangar
+    3300002: HangarDoor
+    3300004: HangarDoor_Light
+    3300006: OuterRibs_Mid
+    3300008: Plane
+    3300010: Plane 1
+    3300012: Plane_1
+    3300014: Plane_1 1
+    3300016: Plane_10
+    3300018: Plane_1_10
+    3300020: Plane_1_4
+    3300022: Plane_1_4 1
+    3300024: Plane_1_5
+    3300026: Plane_1_6
+    3300028: Plane_1_7
+    3300030: Plane_1_8
+    3300032: Plane_1_9
+    3300034: Plane_2
+    3300036: Plane_2 1
+    3300038: Plane_2_10
+    3300040: Plane_2_11
+    3300042: Plane_2_5
+    3300044: Plane_2_5 1
+    3300046: Plane_2_6
+    3300048: Plane_2_7
+    3300050: Plane_2_8
+    3300052: Plane_2_9
+    3300054: Plane_4
+    3300056: Plane_4 1
+    3300058: Plane_5
+    3300060: Plane_6
+    3300062: Plane_7
+    3300064: Plane_8
+    3300066: Plane_9
+    3300068: POST_LOWER
+    3300070: Post_Lower_Light
+    3300072: Post_Upper_Light
+    3300074: POSTS_MID
+    3300076: PostUpper_1
+    3300078: PostUpper_2
+    3300080: PostUpper_2_Light
+    3300082: ShipSides
+    3300084: ShipTop_Bottom
+    3300086: Station_Strut
+    3300088: StationCore
+    4300000: HangarDoor
+    4300002: HangarDoor_Light
+    4300004: Hangar
+    4300006: Post_Lower_Light
+    4300008: PostUpper_2_Light
+    4300010: Post_Upper_Light
+    4300012: Plane_1
+    4300014: Plane_2
+    4300016: Plane
+    4300018: Plane_1
+    4300020: Plane_2
+    4300022: Plane
+    4300024: Plane_1_4
+    4300026: Plane_2_5
+    4300028: Plane_4
+    4300030: Plane_1_4
+    4300032: Plane_2_5
+    4300034: Plane_4
+    4300036: Plane_1_5
+    4300038: Plane_2_6
+    4300040: Plane_5
+    4300042: Plane_1_6
+    4300044: Plane_2_7
+    4300046: Plane_6
+    4300048: Plane_1_7
+    4300050: Plane_2_8
+    4300052: Plane_7
+    4300054: Plane_1_8
+    4300056: Plane_2_9
+    4300058: Plane_8
+    4300060: Plane_1_9
+    4300062: Plane_2_10
+    4300064: Plane_9
+    4300066: Plane_1_10
+    4300068: Plane_2_11
+    4300070: Plane_10
+    4300072: OuterRibs_Mid
+    4300074: PostUpper_1
+    4300076: PostUpper_2
+    4300078: POSTS_MID
+    4300080: POST_LOWER
+    4300082: StationCore
+    4300084: Station_Strut
+    4300086: ShipSides
+    4300088: ShipTop_Bottom
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
