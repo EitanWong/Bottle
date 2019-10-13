@@ -8,13 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crystal
-  m_Shader: {fileID: 4800000, guid: be01a6202122cde4e9b0bd2e7f93a961, type: 3}
-  m_ShaderKeywords: _ADDITIVE _FINALALPHA _GEOREFRACTIONS _RIMLIGHTING
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ADDITIVE _ALPHAPREMULTIPLY_ON _EMISSION _FINALALPHA _GEOREFRACTIONS
+    _GLOSSYREFLECTIONS_OFF _RIMLIGHTING
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
@@ -26,6 +28,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: c3bb1d5298b924d80959c9f822ffe414, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,6 +62,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadedBaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -65,10 +83,11 @@ Material:
     - _Cull: 2
     - _CustomWrap: 0.4
     - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
     - _DiffuseFallOff: 0.01
     - _DiffuseStep: 0
     - _Distortion: 0.01
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _EnableBaseMap: 0
     - _EnableGeoRefr: 1
     - _EnableMaskMap: 0
@@ -82,15 +101,17 @@ Material:
     - _IOR: 1.33
     - _IsThinShell: 0
     - _Metallic: 0
+    - _Mode: 3
     - _Occlusion: 1
     - _OcclusionStrength: 1
+    - _Parallax: 0.02
     - _QueueOffset: -50
     - _ReadMask: 2
     - _ReceiveShadows: 1
     - _Rim: 1
     - _RimAttenuation: 0
     - _RimFallOff: 1
-    - _RimFrequency: 0
+    - _RimFrequency: 2
     - _RimMinPower: 0
     - _RimPerPositionFrequency: 0
     - _RimPower: 2
@@ -104,7 +125,7 @@ Material:
     - _SpecularFallOff: 0.01
     - _SpecularHighlights: 1
     - _SpecularStep: 0.45
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Stencil: 2
     - _StencilComp: 7
     - _StencilFail: 2
@@ -113,14 +134,15 @@ Material:
     - _Surface: 1
     - _TranslucencyPower: 7
     - _TranslucencyStrength: 1
+    - _UVSec: 0
     - _WorkflowMode: 1
     - _WriteMask: 2
     - _ZTest: 4
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0, g: 1, b: 1, a: 0.48235294}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _EmissionColor: {r: 0.53588676, g: 0.53588676, b: 0, a: 1}
+    - _BaseColor: {r: 0, g: 1, b: 1, a: 0}
+    - _Color: {r: 0, g: 1, b: 1, a: 0.54509807}
+    - _EmissionColor: {r: 0, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0, g: 8.824974, b: 8.824974, a: 0.3647059}
     - _ShadedBaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0.48235294, b: 1, a: 1}

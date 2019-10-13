@@ -21,9 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Step
-  m_Shader: {fileID: -6465566751694194690, guid: 3a5fa6261ba88c746bdfe10d5d64aa09,
-    type: 3}
-  m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF _RECEIVE_SHADOWS_OFF
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF _GLOSSYREFLECTIONS_OFF _RECEIVE_SHADOWS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -38,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c3bb1d5298b924d80959c9f822ffe414, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -58,6 +57,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -93,22 +96,34 @@ Material:
     - Vector1_A8EBC463: 0
     - Vector1_D4E738BE: 1
     - _AlphaClip: 0
-    - _Blend: 0
+    - _ApplyNormal: 0
+    - _Blend: 1
     - _Border: 3
     - _Brightness: 1
+    - _BumpRefraction: 0.1
     - _BumpScale: 1
     - _CompensateScale: 0
     - _Cull: 2
+    - _CustomWrap: 0.4
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DetailTex: 0
     - _DiffuseFallOff: 0.01
     - _DiffuseStep: 0
+    - _Distortion: 0.01
     - _DstBlend: 0
+    - _EnableBaseMap: 0
+    - _EnableGeoRefr: 1
+    - _EnableMaskMap: 0
+    - _EnableScreenEdgeFade: 0
     - _EnvironmentReflections: 0
+    - _ExcludeForeground: 0
+    - _FinalAlpha: 0.5
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _IOR: 1.33
+    - _IsThinShell: 0
     - _Metallic: 0
     - _Mode: 0
     - _Occlusion: 0.5
@@ -126,8 +141,12 @@ Material:
     - _RimMinPower: 1
     - _RimPerPositionFrequency: 1
     - _RimPower: 0.5
+    - _ScreenEdgeFade: 8
     - _ShadowFallOff: 0.01
+    - _ShadowOffset: 1
+    - _ShadowStrength: 0.7
     - _Smoothness: 0
+    - _SmoothnessBase: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularFallOff: 0.01
     - _SpecularHighlights: 1
@@ -140,6 +159,8 @@ Material:
     - _StencilZFail: 2
     - _Surface: 0
     - _TintColor: 1
+    - _TranslucencyPower: 7
+    - _TranslucencyStrength: 1
     - _UVSec: 0
     - _VertexColor: 1
     - _WorkflowMode: 1
@@ -156,4 +177,5 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadedBaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColorBase: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Specular: {r: 0.2, g: 0.2, b: 0.2, a: 0}

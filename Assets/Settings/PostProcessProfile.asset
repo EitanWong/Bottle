@@ -61,13 +61,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 10
+    value: 5
   threshold:
     overrideState: 1
-    value: 0.8722
+    value: 1
   softKnee:
     overrideState: 1
-    value: 0.2228
+    value: 0.693
   clamp:
     overrideState: 0
     value: 65472
@@ -196,7 +196,7 @@ MonoBehaviour:
     overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
-    overrideState: 1
+    overrideState: 0
     value: {x: 1, y: 1, z: 1, w: -0.3204713}
   gain:
     overrideState: 0
@@ -1431,10 +1431,10 @@ MonoBehaviour:
     value: 0.53
   smoothness:
     overrideState: 1
-    value: 0.57
+    value: 0.885
   roundness:
     overrideState: 1
-    value: 0.454
+    value: 0.522
   rounded:
     overrideState: 1
     value: 0

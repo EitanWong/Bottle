@@ -122,7 +122,7 @@ public class FPSLabel : MonoBehaviour
 		m_WindowRect = GUI.Window(0, m_WindowRect, DoMyWindow, "");
 		CheckGUIEvents();
 		GUI.color=Color.magenta;
-		GUI.Label(new Rect(BottomLeftPosX + GraphLength + 5, Screen.height - BottomLeftPosY - 10, 100, 20), (_memUsed / 1000000).ToString() + "Mb");
+		GUI.Label(new Rect(10,85,200,200),(_memUsed / 1000000).ToString() + "Mb");
 	}
 	private void DoMyWindow(int windowID)
 	{

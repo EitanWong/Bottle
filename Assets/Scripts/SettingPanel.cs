@@ -24,7 +24,7 @@ public class SettingPanel : MonoBehaviour
         LimitFPS.gameObject.SetActive(UseLimitFPS.isOn);
         XinputMu.onValueChanged.AddListener(UpdateXInputValue);
         YinputMu.onValueChanged.AddListener(UpdateYInputValue);
-        LimitFPS.onValueChanged.AddListener(UpdateLimitFPS);
+        LimitFPS.onEndEdit.AddListener(UpdateLimitFPS);
         UseLimitFPS.onValueChanged.AddListener(UpdateUseLimitFPS);
         UsePosProcessing.onValueChanged.AddListener(UpdateUsePostProcessing);
     }

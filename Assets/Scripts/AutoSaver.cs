@@ -21,11 +21,13 @@ public class AutoSaver : MonoBehaviour
         TransSaveName = m_Trans.name + "Pos";
         MeshSaveName = m_Trans.name + "Mesh";
         Application.focusChanged += OnFocusChange;
-
+        InitData();
+        if (OnLoseResetData)
+        {
+            GameManager.INS.GameEvents.OnGameLose += ClearData;
+            GameManager.INS.GameEvents.OnGameStop += ClearData;
+        }
     }
-
-
-
    public void InitData()
     {
         if (ES3.KeyExists(TransSaveName))
@@ -50,12 +52,6 @@ public class AutoSaver : MonoBehaviour
 
    private bool isGameOver;
     // Start is called before the first frame update
-    void Start()
-    {
-        InitData();
-        if (OnLoseResetData)
-            GameManager.INS.GameEvents.OnGameLose += ClearData;
-    }
 
     public void ClearData()
     {
@@ -102,8 +98,7 @@ public class AutoSaver : MonoBehaviour
         }
         else if(isGameOver)
         {
-            
-                ClearData();
+            ClearData();
         }
     }
 

@@ -7,12 +7,11 @@ public class StepCheck : MonoBehaviour
 {
     private Transform trans;
     [SerializeField] private float radius;
-    [SerializeField]private Material NextMaterial;
+   // [SerializeField]private Material NextMaterial;
    [SerializeField] private LayerMask WatIsStep;
-   private Material LastStepMatertial;
-    private MeshRenderer NextStep;
+   private Outline LastStepMatertial;
 
-    private void Awake()
+   private void Awake()
     {
         trans = transform;
     }
@@ -51,15 +50,12 @@ public class StepCheck : MonoBehaviour
          if (result)
          {
 
-             LastStepMatertial = result.GetComponent<MeshRenderer>().material;
-            
-             if (NextStep)
-             {
-                 if(NextStep.material!=NextMaterial)
-                    NextStep.material = LastStepMatertial;
-             }
-             NextStep = result.GetComponent<MeshRenderer>();
-             NextStep.material=NextMaterial;
+             if(LastStepMatertial)
+             LastStepMatertial.enabled=false;
+             
+             var Step =result.GetComponent<Outline>();
+             Step.enabled = true;
+             LastStepMatertial = Step;
          }
      }
     }
