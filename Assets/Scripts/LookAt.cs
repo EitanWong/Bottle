@@ -29,6 +29,6 @@ public class LookAt : MonoBehaviour
     private void FixedUpdate()
     {
         if(Target)
-        m_trans.LookAt(Target.position/100);
+        m_trans.LookAt(Target.position);
     }
 }

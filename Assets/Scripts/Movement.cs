@@ -3,11 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Cinemachine.Utility;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityScript.Steps;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Movement : MonoBehaviour
@@ -44,7 +42,7 @@ public class Movement : MonoBehaviour
    private Vector3 moveVelocity;
    private float x;
    private float y;
-  [SerializeField] private Mesh OriginMesh;
+  //[SerializeField] private Mesh OriginMesh;
   Data GameDataINS;
    private void Awake()
    {
@@ -144,7 +142,7 @@ public class Movement : MonoBehaviour
         {
             if (JumpTimeCounter > 0)
             {
-                m_rig.velocity = Vector2.up * JumpForce;
+                m_rig.velocity = Vector2.up * (JumpForce-Time.deltaTime);
                 JumpTimeCounter -= Time.deltaTime;
             }
         }
@@ -197,7 +195,7 @@ public class Movement : MonoBehaviour
 
    private void OnGUI()
    {
-       GUILayout.Label(String.Format("水平{0}X,纵向{1}X",x,y));
+       GUI.Label(new Rect(10,50,200,200),String.Format("水平{0}X,纵向{1}X",x,y));
    }
 
    private void OnCollisionEnter(Collision other)

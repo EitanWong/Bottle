@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using NTP;
+using Papae.UnitySDK.Managers;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
             GameData.InitData();//初始化数据
             Application.focusChanged += FocusChange;
             GameEvents.OnGameLose += GameData.SaveGameData;
-            StartCoroutine(GameData.UpdateGameTime());
+
             //GameData.CheckTimeUpdate();//检测时间
          GameEvents.OnGameLose += GameData.AddDeathCount;//当玩家游戏失败时，增加死亡数量
          if (GameData.IsNewDay)
@@ -34,7 +35,10 @@ public class GameManager : MonoBehaviour
              GameEvents.OnNewDay?.Invoke();
              GameEvents.EventOnNewDay?.Invoke();
          }
-        // Debug.Log(GameData.ISFirstOpenApp);
+
+         GameEvents.OnGameStart += StartGameTimeCalculation;
+         GameEvents.OnGameStop += UnPauseGame;
+         // Debug.Log(GameData.ISFirstOpenApp);
     }
 
  private void Start()
@@ -42,6 +46,12 @@ public class GameManager : MonoBehaviour
 
 
  }
+
+ private void StartGameTimeCalculation()
+ {
+     StartCoroutine(GameData.UpdateGameTime());
+ }
+
  private void FocusChange(bool obj)
  {
     GameData.SaveGameData();
@@ -55,7 +65,17 @@ public class GameManager : MonoBehaviour
    GC.Collect();
  }
 
- 
+ public void PauseGame()
+ {
+     FindObjectOfType<AudioManager>().PauseBGM();
+     Time.timeScale = 0;
+ }
+
+ public void UnPauseGame()
+ {
+     FindObjectOfType<AudioManager>().ResumeBGM();
+     Time.timeScale = 1;
+ }
 
  public void LoseGame()
  {
@@ -80,7 +100,11 @@ public class GameManager : MonoBehaviour
      GameEvents.OnGameEnd?.Invoke();
      GameEvents.EventOnGameEnd?.Invoke();
  }
-
+ public void StopGame()
+ {
+     GameEvents.OnGameStop?.Invoke();
+     GameEvents.EventOnGameStop?.Invoke();
+ }
  private void OnApplicationQuit()
  {
     GameData.SaveHeightData();
@@ -96,6 +120,6 @@ public class GameManager : MonoBehaviour
 
  private void OnGUI()
  {
-     GUILayout.Label(Input.acceleration.ToString());
+     GUI.Label(new Rect(10,30,200,200),Input.acceleration.ToString());
  }
 }

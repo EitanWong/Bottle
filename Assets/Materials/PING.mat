@@ -21,9 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PING
-  m_Shader: {fileID: -6465566751694194690, guid: 3a5fa6261ba88c746bdfe10d5d64aa09,
-    type: 3}
-  m_ShaderKeywords: _NORMALMAP
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -38,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c3bb1d5298b924d80959c9f822ffe414, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMask:
@@ -58,6 +57,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -85,6 +88,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RefractTex:
+        m_Texture: {fileID: 8900000, guid: c9bef6aa6c8d64d439dcfbdb5f7b59c9, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SecondaryMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -94,6 +101,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopDownBaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopDownNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -107,23 +122,31 @@ Material:
     - _AlphaClip: 0
     - _AlphaFromMaskMap: 1
     - _Anisotropy: 0
+    - _ApplyDynScale: 0
     - _ApplyNormal: 0
+    - _ApplyTopDownProjection: 1
     - _Blend: 0
+    - _BlinnPhong: 0
     - _Border: 1.61
     - _BumpRefraction: 0.1
     - _BumpScale: 1
+    - _BumpScaleDyn: 1
     - _ClearCoatSmoothness: 0.5
     - _ClearCoatThickness: 0.5
+    - _CombinedTexture: 0
     - _CompensateScale: 0
     - _Cull: 2
     - _Culling: 0
     - _CustomWrap: 0.4
-    - _Cutoff: 0.5
+    - _Cutoff: 0
+    - _Density: 1
     - _DetailNormalMapScale: 1
     - _DiffuseFallOff: 1
     - _DiffuseStep: 0.04
     - _Distortion: 0.01
     - _DstBlend: 0
+    - _EdgeBlend: 2
+    - _Emission: 0
     - _EnableBaseMap: 0
     - _EnableCoatMask: 0
     - _EnableGeoRefr: 1
@@ -133,26 +156,44 @@ Material:
     - _EnableSecondaryLobe: 0
     - _EnableSecondaryMask: 0
     - _EnableStandardLighting: 0
+    - _EnvironmentLight: 1
     - _EnvironmentReflections: 0
     - _ExcludeForeground: 0
     - _FinalAlpha: 0.5
+    - _Foam: 1
+    - _FoamScale: 4
+    - _FoamSlopStrength: 0.85
+    - _FoamSmoothness: 0.3
+    - _FoamSoftIntersectionFactor: 0.5
+    - _FoamTiling: 2
     - _FresnelPower: 1
     - _GlossMapScale: 0
-    - _Glossiness: 0
+    - _GlossMapScaleDyn: 1
+    - _Glossiness: 0.5
     - _GlossinessSource: 0
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
+    - _HeightBlendSharpness: 1
     - _Help: 0
     - _IOR: 1.33
     - _IsThinShell: 0.071
-    - _Metallic: 1
+    - _LowerNormalInfluence: 1
+    - _LowerNormalMinStrength: 0.2
+    - _MaskFromNormal: 0
+    - _Metallic: 0
     - _Mode: 0
+    - _NormalFactor: 1
+    - _NormalLimit: 0.5
     - _Occlusion: 0
     - _OcclusionStrength: 1
+    - _OrthoSpport: 0
     - _OutlineInScreenSpace: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReadMask: 255
     - _ReceiveShadows: 1
+    - _ReflectionBumpScale: 0.3
+    - _ReflectionStrength: 1
+    - _Refraction: 0.25
     - _Rim: 1
     - _RimAttenuation: 0.058
     - _RimFallOff: 1
@@ -166,9 +207,9 @@ Material:
     - _ShadowOffset: 1
     - _ShadowStrength: 0.7
     - _Shadows: 0
-    - _Shininess: 0
+    - _Shininess: 1
     - _Smoothness: 0
-    - _SmoothnessBase: 0.5
+    - _SmoothnessBase: 0
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
@@ -184,7 +225,8 @@ Material:
     - _StencilZFail: 0
     - _Surface: 0
     - _TintMin: 0.5
-    - _TranslucencyPower: 7
+    - _TopDownTiling: 1
+    - _TranslucencyPower: 18.5
     - _TranslucencyStrength: 1
     - _TransmissionDistortion: 0.01
     - _TransmissionPower: 7
@@ -200,19 +242,26 @@ Material:
     m_Colors:
     - Color_811F1543: {r: 0, g: 0, b: 0, a: 1}
     - Color_92F10B01: {r: 1, g: 1, b: 1, a: 0}
-    - _BaseColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 0.69411767}
-    - _ClearCoatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ClearCoatSpecular: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 1, b: 1, a: 1}
+    - _DistanceFade: {r: 900, g: 0.005, b: 0, a: 0}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _FoamSpeed: {r: 0.1, g: 0, b: 0, a: 0}
     - _MaskMapTiling: {r: 1, g: 1, b: 0, a: 0}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
     - _SecondaryColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SecondaryTilingSpeedRefractBump: {r: 2, g: 2.3, b: 0.1, a: 1}
     - _ShadedBaseColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SheenColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColorBase: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SheenColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    - _SpecColor: {r: 0.13616946, g: 0.23273107, b: 0.6415094, a: 1}
+    - _SpecColorBase: {r: 0.3882353, g: 0.3882353, b: 0.3882353, a: 1}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}
+    - _Speed: {r: 0.1, g: 0, b: 0, a: 0}
+    - _TerrainPosition: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 0}
+    - _TintColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 0}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _WindMultiplier: {r: 1, g: 2, b: 1, a: 0}

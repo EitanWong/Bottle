@@ -40,8 +40,8 @@ public class Crystal : MonoBehaviour
         oldPos = transform.position; // 将最初的位置保存到oldPos  
     }
 
-   
 
+    private WaitForFixedUpdate WaitFixed=new WaitForFixedUpdate();
     IEnumerator RoateCrystal()
     {
         yield return new WaitForSeconds(UnityEngine.Random.Range(0f,1f));
@@ -49,7 +49,7 @@ public class Crystal : MonoBehaviour
         while (true)
         {
             CrystalTrans.Rotate(Vector3.up*Time.deltaTime*rotatespeed);
-            yield return  new WaitForFixedUpdate();
+            yield return  WaitFixed;
         }
     }
 

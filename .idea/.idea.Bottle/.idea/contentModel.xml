@@ -14,6 +14,7 @@
             <e p="Tempo Information.txt" t="Include" />
           </e>
         </e>
+        <e p="BackBlur.shader" t="Include" />
         <e p="Easy Save 2" t="Include">
           <e p="changelog.txt" t="Include" />
           <e p="ES2Init.cs" t="Include" />
@@ -42,6 +43,12 @@
             <e p="ES2_GameObject.cs" t="Include" />
             <e p="ES2_RawTexture2D.cs" t="Include" />
             <e p="ES2_Sprite.cs" t="Include" />
+          </e>
+        </e>
+        <e p="GemExample" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="DemoTimeOfDay.cs" t="Include" />
+            <e p="Orbit.cs" t="Include" />
           </e>
         </e>
         <e p="Model" t="Include">
@@ -92,178 +99,9 @@
             <e p="FPSLabel.cs" t="Include" />
             <e p="FPSLabelStarter.cs" t="Include" />
           </e>
-          <e p="Lux LWRP Essentials" t="Include">
-            <e p="CangeLog.txt" t="Include" />
-            <e p="Demos" t="Include">
-              <e p="Fonts" t="Include">
-                <e p="ZwriteFont.shader" t="Include" />
-              </e>
-              <e p="Scripts" t="Include">
-                <e p="AnimateSphere.cs" t="Include" />
-                <e p="CheckSettings.cs" t="Include" />
-                <e p="ExtendedFlycam.cs" t="Include" />
-                <e p="Outline Demo" t="Include">
-                  <e p="MouseSelect.cs" t="Include" />
-                  <e p="ToggleOutlineSelection.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="LuxLWRP__URP_7.1.2 README.txt" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="Decals" t="Include">
-                <e p="Decal.cs" t="Include" />
-                <e p="DecalGizmos.cs" t="Include" />
-                <e p="DecalManager.cs" t="Include" />
-                <e p="Editor" t="Include">
-                  <e p="DecalEditor.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Editor" t="Include">
-                <e p="LitExtendedShader.cs" t="Include" />
-                <e p="LuxLWRP_GrassMeshPostprocessor.cs" t="Include" />
-                <e p="LuxLWRPCustomBillboardShaderGUI.cs" t="Include" />
-                <e p="LuxLWRPCustomGlassShaderGUI.cs" t="Include" />
-                <e p="LuxLWRPCustomShaderGUI.cs" t="Include" />
-                <e p="LuxLWRPCustomSingleSidedShaderGUI.cs" t="Include" />
-                <e p="LuxLWRPCustomSkinShaderGUI.cs" t="Include" />
-                <e p="LuxLWRPHelpDrawer.cs" t="Include" />
-                <e p="LuxLWRPParticlesCustomShaderGUI1.cs" t="Include" />
-                <e p="LuxLWRPUniversalCustomShaderGUI.cs" t="Include" />
-                <e p="LuxLWRPVectorFourDrawer.cs" t="Include" />
-                <e p="LuxLWRPVectorThreeDrawer.cs" t="Include" />
-                <e p="LuxLWRPVectorTwoDrawer.cs" t="Include" />
-                <e p="LuxLWRPVectorTwoInverseDrawer.cs" t="Include" />
-                <e p="LuxLWRPWindDistanceFadeDrawer.cs" t="Include" />
-                <e p="LuxLWRPWindFoliageDrawer.cs" t="Include" />
-                <e p="LuxLWRPWindGrassDrawer.cs" t="Include" />
-              </e>
-              <e p="LuxLWRP_HelpBtn.cs" t="Include" />
-              <e p="LuxLWRP_LayerBasedCulling.cs" t="Include" />
-              <e p="LuxLWRP_Wind.cs" t="Include" />
-              <e p="Resources" t="Include">
-                <e p="Lux LWRP WindComposite.shader" t="Include" />
-              </e>
-            </e>
-            <e p="Shader Graphs" t="Include">
-              <e p="Includes" t="Include">
-                <e p="Lux_Lighting_CharlieSheen.hlsl" t="Include" />
-                <e p="Lux_Lighting_ClearCoat.hlsl" t="Include" />
-                <e p="Lux_Lighting_GGX_Anisotropic.hlsl" t="Include" />
-                <e p="Lux_Lighting_Toon.hlsl" t="Include" />
-                <e p="Lux_Lighting_Transmission.hlsl" t="Include" />
-                <e p="Lux_Lighting_Transparent.hlsl" t="Include" />
-              </e>
-            </e>
+          <e p="Gem" t="Include">
             <e p="Shaders" t="Include">
-              <e p="Billboard" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Billboard Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Billboard.shader" t="Include" />
-              </e>
-              <e p="Clear Coat" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Clear Coat Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Clear Coat.shader" t="Include" />
-              </e>
-              <e p="Cloth" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Cloth Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Cloth.shader" t="Include" />
-              </e>
-              <e p="Decals" t="Include">
-                <e p="Lux LWRP Lit Decal.shader" t="Include" />
-                <e p="Lux LWRP Unlit Decal.shader" t="Include" />
-              </e>
-              <e p="Depth Only" t="Include">
-                <e p="Lux LWRP Depth Only.shader" t="Include" />
-              </e>
-              <e p="Glass" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Glass Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Glass.shader" t="Include" />
-              </e>
-              <e p="Human" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Hair Core.hlsl" t="Include" />
-                  <e p="Lux LWRP Hair Inputs.hlsl" t="Include" />
-                  <e p="Lux LWRP Skin Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Hair Blend.shader" t="Include" />
-                <e p="Lux LWRP Hair.shader" t="Include" />
-                <e p="Lux LWRP Skin.shader" t="Include" />
-              </e>
-              <e p="Includes" t="Include">
-                <e p="Lux LWRP Clear Coat Lighting.hlsl" t="Include" />
-                <e p="Lux LWRP Cloth Lighting.hlsl" t="Include" />
-                <e p="Lux LWRP Hair Lighting.hlsl" t="Include" />
-                <e p="Lux LWRP Skin Lighting.hlsl" t="Include" />
-                <e p="Lux LWRP Translucent Lighting.hlsl" t="Include" />
-                <e p="Lux LWRP Transparent Lighting.hlsl" t="Include" />
-                <e p="Lux LWRP Tree Creator Lighting.hlsl" t="Include" />
-              </e>
-              <e p="Lit Extended" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Lit Extended Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Lit Extended.shader" t="Include" />
-              </e>
-              <e p="Outline" t="Include">
-                <e p="Lux LWRP Fast Outline.shader" t="Include" />
-                <e p="Lux LWRP Toon Outline.shader" t="Include" />
-              </e>
-              <e p="Particles" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Particles Simple Lit Forward Pass.hlsl" t="Include" />
-                  <e p="Lux LWRP Particles Simple Lit Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Particles Simple Lit Tess.shader" t="Include" />
-                <e p="Lux LWRP Particles Simple Lit.shader" t="Include" />
-              </e>
-              <e p="Projection" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Top Down LWRP Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Projection Top Down.shader" t="Include" />
-              </e>
-              <e p="Terrain" t="Include">
-                <e p="Lux LWRP MeshTerrain.shader" t="Include" />
-              </e>
-              <e p="Transmission" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Transmission Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Transmission.shader" t="Include" />
-              </e>
-              <e p="Tree Creator" t="Include">
-                <e p="CameraFacingBillboardTree.shader" t="Include" />
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Tree Creator Inputs.hlsl" t="Include" />
-                  <e p="Lux LWRP Tree Creator Library.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Tree Creator Bark Optimized.shader" t="Include" />
-                <e p="Lux LWRP Tree Creator Bark.shader" t="Include" />
-                <e p="Lux LWRP Tree Creator Leaves Optimized.shader" t="Include" />
-                <e p="Lux LWRP Tree Creator Leaves.shader" t="Include" />
-                <e p="Lux TreeCreatorBarkRendertex.shader" t="Include" />
-                <e p="Lux TreeCreatorLeavesRendertex.shader" t="Include" />
-              </e>
-              <e p="Vegetation" t="Include">
-                <e p="Includes" t="Include">
-                  <e p="Lux LWRP Foliage Inputs.hlsl" t="Include" />
-                  <e p="Lux LWRP Grass Inputs.hlsl" t="Include" />
-                </e>
-                <e p="Lux LWRP Foliage Debug.shader" t="Include" />
-                <e p="Lux LWRP Foliage.shader" t="Include" />
-                <e p="Lux LWRP Grass.shader" t="Include" />
-                <e p="Lux LWRP Wind Visualize.shader" t="Include" />
-              </e>
-              <e p="Water" t="Include">
-                <e p="Lux LWRP Water.shader" t="Include" />
-              </e>
+              <e p="Gem.shader" t="Include" />
             </e>
           </e>
           <e p="Meshinator" t="Include">
@@ -331,6 +169,21 @@
                 <e p="SoundSettings.cs" t="Include" />
               </e>
             </e>
+          </e>
+        </e>
+        <e p="OutlineEffect" t="Include">
+          <e p="Demo" t="Include">
+            <e p="MaterialSwitcher.cs" t="Include" />
+            <e p="OutlineAnimation.cs" t="Include" />
+            <e p="Rotate.cs" t="Include" />
+            <e p="Toggle.cs" t="Include" />
+          </e>
+          <e p="LinkedSet.cs" t="Include" />
+          <e p="Outline.cs" t="Include" />
+          <e p="OutlineEffect.cs" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="OutlineBufferShader.shader" t="Include" />
+            <e p="OutlineShader.shader" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">
@@ -736,9 +589,11 @@
           </e>
           <e p="QHierarchy" t="Include">
             <e p="Attribute" t="Include">
+              <e p="QHierarchyNullable.asmdef" t="Include" />
               <e p="QHierarchyNullable.cs" t="Include" />
             </e>
             <e p="Editor" t="Include">
+              <e p="QHierarchyEditor.asmdef" t="Include" />
               <e p="Scripts" t="Include">
                 <e p="pcomponent" t="Include">
                   <e p="pbase" t="Include">
@@ -782,8 +637,41 @@
               </e>
             </e>
             <e p="Scripts" t="Include">
+              <e p="QHierarchyRuntime.asmdef" t="Include" />
               <e p="QObjectList.cs" t="Include" />
             </e>
+          </e>
+          <e p="UITween" t="Include">
+            <e p="Editor" t="Include">
+              <e p="EditorUITween.cs" t="Include" />
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Click Effect Pref" t="Include">
+                <e p="ClickedWaveAnimation.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ScenesExamplesScripts" t="Include">
+              <e p="ActivateOnEnable.cs" t="Include" />
+              <e p="CreateAnimImage.cs" t="Include" />
+              <e p="FollowClick.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="EasyTween.cs" t="Include" />
+              <e p="ReferencedFrom.cs" t="Include" />
+              <e p="UITween.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="QuickOutline" t="Include">
+          <e p="readme.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="OutlineFill.shader" t="Include" />
+              <e p="OutlineMask.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Outline.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -797,18 +685,22 @@
           <e p="Crystal.cs" t="Include" />
           <e p="CrystalManager.cs" t="Include" />
           <e p="CrystalView.cs" t="Include" />
+          <e p="FllowTarget.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
           <e p="FPSShow.cs" t="Include" />
+          <e p="GameTimeCheck.cs" t="Include" />
           <e p="LookAt.cs" t="Include" />
           <e p="MeshBreak.cs" t="Include" />
           <e p="MicInput.cs" t="Include" />
           <e p="MicSoundCheck.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
           <e p="NetworkTime.cs" t="Include" />
+          <e p="PausePanel.cs" t="Include" />
           <e p="PlayerGoOutSideCheck.cs" t="Include" />
           <e p="ResultCheck.cs" t="Include" />
           <e p="SettingPanel.cs" t="Include" />
           <e p="SortAngle.cs" t="Include" />
+          <e p="StarFX.cs" t="Include" />
           <e p="StepCheck.cs" t="Include" />
           <e p="System" t="Include">
             <e p="Data.cs" t="Include" />
@@ -819,26 +711,66 @@
           </e>
           <e p="TouchToPlane.cs" t="Include" />
           <e p="TrackLight.cs" t="Include" />
+          <e p="TransFollow.cs" t="Include" />
           <e p="Trigger.cs" t="Include" />
         </e>
-        <e p="UITween" t="Include">
-          <e p="Editor" t="Include">
-            <e p="EditorUITween.cs" t="Include" />
-          </e>
-          <e p="Prefabs" t="Include">
-            <e p="Click Effect Pref" t="Include">
-              <e p="ClickedWaveAnimation.cs" t="Include" />
+        <e p="Smart" t="Include">
+          <e p="Inspector" t="Include">
+            <e p="Documenatation.txt" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="Inspector.cs" t="Include" />
+              <e p="InspectorComponent.cs" t="Include" />
+              <e p="InspectorEditor.cs" t="Include" />
+              <e p="InspectorEvents.cs" t="Include" />
+              <e p="InspectorFields.cs" t="Include" />
+              <e p="InspectorFilter.cs" t="Include" />
+              <e p="InspectorPreview.cs" t="Include" />
+              <e p="InspectorProperties.cs" t="Include" />
+              <e p="InspectorSearch.cs" t="Include" />
+              <e p="InspectorSelection.cs" t="Include" />
+              <e p="InspectorSettings.cs" t="Include" />
+              <e p="InspectorStyles.cs" t="Include" />
+              <e p="InspectorTypes.cs" t="Include" />
+              <e p="InspectorUtil.cs" t="Include" />
+              <e p="Preview.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Player.cs" t="Include" />
             </e>
           </e>
-          <e p="ScenesExamplesScripts" t="Include">
-            <e p="ActivateOnEnable.cs" t="Include" />
-            <e p="CreateAnimImage.cs" t="Include" />
-            <e p="FollowClick.cs" t="Include" />
+          <e p="Utility" t="Include">
+            <e p="Editor" t="Include">
+              <e p="CreateScriptWindow.cs" t="Include" />
+              <e p="EditorExtensions.cs" t="Include" />
+              <e p="SmartEditorGUI.cs" t="Include" />
+              <e p="SmartEditorViewer.cs" t="Include" />
+            </e>
           </e>
-          <e p="Scripts" t="Include">
-            <e p="EasyTween.cs" t="Include" />
-            <e p="ReferencedFrom.cs" t="Include" />
-            <e p="UITween.cs" t="Include" />
+        </e>
+        <e p="UGUIImageShaderPack" t="Include">
+          <e p="Examples" t="Include">
+            <e p="TestController.cs" t="Include" />
+          </e>
+          <e p="UIMaterials" t="Include">
+            <e p="UIDynamicMaterials" t="Include">
+              <e p="UIImage_Dynamic_Wave_Circle.shader" t="Include" />
+              <e p="UIImage_Dynamic_Wave_Direction.shader" t="Include" />
+            </e>
+            <e p="UIStaticMaterials" t="Include">
+              <e p="UIImage_Static_Bloom.shader" t="Include" />
+              <e p="UIImage_Static_Bloom_Advanced.shader" t="Include" />
+              <e p="UIImage_Static_Blur.shader" t="Include" />
+              <e p="UIImage_Static_Blur_Advanced.shader" t="Include" />
+              <e p="UIImage_Static_Blur_Focus.shader" t="Include" />
+              <e p="UIImage_Static_Bumps.shader" t="Include" />
+              <e p="UIImage_Static_Gradient.shader" t="Include" />
+              <e p="UIImage_Static_Gray.shader" t="Include" />
+              <e p="UIImage_Static_Outline_Alpha.shader" t="Include" />
+              <e p="UIImage_Static_Relief.shader" t="Include" />
+              <e p="UIImage_Static_Sharp.shader" t="Include" />
+              <e p="UIImage_Static_SpotLight.shader" t="Include" />
+            </e>
           </e>
         </e>
         <e p="World Portal System Package" t="Include">

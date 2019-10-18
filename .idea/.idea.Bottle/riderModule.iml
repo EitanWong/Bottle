@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.adaptiveperformance@1.0.0" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.ide.rider@1.1.0" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.ide.vscode@1.1.2" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@6.9.1" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.lightweight@6.9.1" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.shadergraph@6.9.1" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.subsystemregistration@1.0.5" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.test-framework@1.0.13" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@2.0.1" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.xr.arfoundation@2.0.2" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.xr.arsubsystems@2.0.2" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.xr.legacyinputhelpers@1.0.0" />
     <content url="file://$MODULE_DIR$/../.." />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

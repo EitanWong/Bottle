@@ -121,8 +121,15 @@ public class Data
       {
          SavePostProcessing(false);
       }
-      MonoBehaviour.FindObjectOfType<PostProcessVolume>().enabled = UsePostProcessing;
-      MonoBehaviour.FindObjectOfType<PostProcessLayer>().enabled = UsePostProcessing;
+      try
+      {
+         MonoBehaviour.FindObjectOfType<PostProcessVolume>().enabled = UsePostProcessing;
+         MonoBehaviour.FindObjectOfType<PostProcessLayer>().enabled = UsePostProcessing;
+      }
+      catch (Exception e)
+      {
+
+      }
       if (ES3.KeyExists(SN_DeathCount))
       {
          DeathCount = ES3.Load<int>(SN_DeathCount);
@@ -227,8 +234,16 @@ public class Data
  {
     UsePostProcessing = value;
      ES3.Save<bool>(SN_UsePost,UsePostProcessing);
-     MonoBehaviour.FindObjectOfType<PostProcessVolume>().enabled = UsePostProcessing;
-     MonoBehaviour.FindObjectOfType<PostProcessLayer>().enabled = UsePostProcessing;
+     try
+     {
+        MonoBehaviour.FindObjectOfType<PostProcessVolume>().enabled = UsePostProcessing;
+        MonoBehaviour.FindObjectOfType<PostProcessLayer>().enabled = UsePostProcessing;
+     }
+     catch (Exception e)
+     {
+
+     }
+
  }
 
  public void AddDeathCount()

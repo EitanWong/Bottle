@@ -8,6 +8,9 @@ public class CameraTrack : MonoBehaviour
 {
     private CinemachineVirtualCamera v_Camera;
     private CinemachineComposer Composer;
+
+    [SerializeField]
+   bool IsMainCamera;
  //   private CinemachineTransposer Transposer;
   //  private CinemachinePOV POV;
   private float OriginFieldOfView;
@@ -27,37 +30,11 @@ public class CameraTrack : MonoBehaviour
     }
     void Update ()
     {
-        if (Application.isMobilePlatform)
-        {
-            if (Composer)
-            {
-                Composer.m_TrackedObjectOffset.x = Input.acceleration.x;
-                Composer.m_TrackedObjectOffset.y = Input.acceleration.y;
-            }
-
-            //Transposer.m_FollowOffset.x=Input.acceleration.x;
-         //  Transposer.m_FollowOffset.y=1+Input.acceleration.y;
-            
-        }
-        else
-        {
-            var Middle = new Vector3(Screen.width / 2, Screen.height / 2);
-            if (Composer)
-            {
-                Composer.m_TrackedObjectOffset.x = (Input.mousePosition-Middle).normalized.x;
-                Composer.m_TrackedObjectOffset.y = (Input.mousePosition-Middle).normalized.y; 
-            }
-            
-            // Transposer.m_FollowOffset.x=(Input.mousePosition-Middle).normalized.x;
-          //  Transposer.m_FollowOffset.y=1+(Input.mousePosition-Middle).normalized.y;
-        }
-
-   
         if (Player)
         {  if (!Player.m_Grounded)
             {
                 if(v_Camera.m_Lens.FieldOfView<100)
-                v_Camera.m_Lens.FieldOfView += Time.deltaTime*ChangeValue;
+                    v_Camera.m_Lens.FieldOfView += Time.deltaTime*ChangeValue;
             }
 
 
@@ -76,6 +53,42 @@ public class CameraTrack : MonoBehaviour
             }
             
         }
+        
+        if (Application.isMobilePlatform)
+        {
+            if (Composer)
+            {
+                Composer.m_TrackedObjectOffset.x = -Input.acceleration.x;
+                Composer.m_TrackedObjectOffset.y = -Input.acceleration.y;
+            }
+            if (IsMainCamera)
+            {
+                transform.eulerAngles=new Vector3(60+(-Input.acceleration.y),0,-Input.acceleration.x);
+            }
+            //Transposer.m_FollowOffset.x=Input.acceleration.x;
+         //  Transposer.m_FollowOffset.y=1+Input.acceleration.y;
+            
+        }
+        else
+        {
+            return;
+            var Middle = new Vector3(Screen.width / 2, Screen.height / 2);
+            if (Composer)
+            {
+                Composer.m_TrackedObjectOffset.x = (Input.mousePosition-Middle).normalized.x;
+               Composer.m_TrackedObjectOffset.y = (Input.mousePosition-Middle).normalized.y; 
+            }
+            if (IsMainCamera)
+            {
+            //    transform.eulerAngles=new Vector3(60+(Input.mousePosition-Middle).normalized.x,0,(Input.mousePosition-Middle).normalized.y);
+            }
+            // Transposer.m_FollowOffset.x=(Input.mousePosition-Middle).normalized.x;
+          //  Transposer.m_FollowOffset.y=1+(Input.mousePosition-Middle).normalized.y;
+        }
+
+ 
+
+       
 
       
     }
