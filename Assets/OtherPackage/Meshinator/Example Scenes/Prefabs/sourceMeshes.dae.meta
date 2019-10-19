@@ -1,46 +1,111 @@
 fileFormatVersion: 2
 guid: 309db8db017484e308a6de0a8e64c11a
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Camera
-    100002: Circle
-    100004: Cube
-    100006: Cube_001
-    100008: Lamp
-    100010: //RootNode
-    100012: Sphere
-    100014: Sphere_001
-    400000: Camera
-    400002: Circle
-    400004: Cube
-    400006: Cube_001
-    400008: Lamp
-    400010: //RootNode
-    400012: Sphere
-    400014: Sphere_001
-    2300000: Circle
-    2300002: Cube
-    2300004: Cube_001
-    2300006: Sphere
-    2300008: Sphere_001
-    3300000: Circle
-    3300002: Cube
-    3300004: Cube_001
-    3300006: Sphere
-    3300008: Sphere_001
-    4300000: Cube_001
-    4300002: Sphere_001
-    4300004: Sphere
-    4300006: Cube
-    4300008: Circle
-    11100000: //RootNode
-  externalObjects:
+  serializedVersion: 26
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 7c8ab2bf713fd8c469ca2ae382a08abb, type: 2}
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Cube_001
+  - first:
+      1: 100004
+    second: Sphere_001
+  - first:
+      1: 100006
+    second: Sphere
+  - first:
+      1: 100008
+    second: Cube
+  - first:
+      1: 100010
+    second: Circle
+  - first:
+      1: 100012
+    second: Lamp
+  - first:
+      1: 100014
+    second: Camera
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Cube_001
+  - first:
+      4: 400004
+    second: Sphere_001
+  - first:
+      4: 400006
+    second: Sphere
+  - first:
+      4: 400008
+    second: Cube
+  - first:
+      4: 400010
+    second: Circle
+  - first:
+      4: 400012
+    second: Lamp
+  - first:
+      4: 400014
+    second: Camera
+  - first:
+      23: 2300000
+    second: Cube_001
+  - first:
+      23: 2300002
+    second: Sphere_001
+  - first:
+      23: 2300004
+    second: Sphere
+  - first:
+      23: 2300006
+    second: Cube
+  - first:
+      23: 2300008
+    second: Circle
+  - first:
+      33: 3300000
+    second: Cube_001
+  - first:
+      33: 3300002
+    second: Sphere_001
+  - first:
+      33: 3300004
+    second: Sphere
+  - first:
+      33: 3300006
+    second: Cube
+  - first:
+      33: 3300008
+    second: Circle
+  - first:
+      43: 4300000
+    second: Cube:001
+  - first:
+      43: 4300002
+    second: Sphere:001
+  - first:
+      43: 4300004
+    second: Sphere
+  - first:
+      43: 4300006
+    second: Cube
+  - first:
+      43: 4300008
+    second: Circle
+  - first:
+      43: 4300010
+    second: Cube_001
+  - first:
+      43: 4300012
+    second: Sphere_001
+  - first:
+      111: 11100000
+    second: //RootNode
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 3
@@ -75,6 +140,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -82,18 +148,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 1
     normalImportMode: 1
@@ -102,10 +169,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -115,6 +183,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

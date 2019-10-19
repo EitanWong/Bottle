@@ -21,13 +21,14 @@
       <Path>Library/PackageCache/com.unity.analytics@3.3.2</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.3.4</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
+      <Path>Library/PackageCache/com.unity.editorcoroutines@0.0.2-preview.1</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
-      <Path>Library/PackageCache/com.unity.ide.rider@1.1.0</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.1.2</Path>
+      <Path>Library/PackageCache/com.unity.memoryprofiler@0.1.0-preview.7</Path>
       <Path>Library/PackageCache/com.unity.postprocessing@2.1.7</Path>
       <Path>Library/PackageCache/com.unity.purchasing@2.0.6</Path>
       <Path>Library/PackageCache/com.unity.subsystemregistration@1.0.6</Path>
-      <Path>Library/PackageCache/com.unity.test-framework@1.0.13</Path>
+      <Path>Library/PackageCache/com.unity.test-framework@1.0.18</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
       <Path>Library/PackageCache/com.unity.xr.arfoundation@2.0.2</Path>
       <Path>Library/PackageCache/com.unity.xr.arsubsystems@2.0.2</Path>
@@ -38,6 +39,7 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>.vscode</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>

@@ -3,20 +3,20 @@
  * Copyright Mike Mahoney 2013
  */
 
-using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(Rigidbody))]
 public class Meshinator : MonoBehaviour
 {
+	[SerializeField] UnityEvent OnBreak;
+	public UnityAction<uint> OnCollider;
+	[SerializeField] uint m_TargetColliderTimes;
+	uint m_ColliderTimes;
 	#region Fields & Properties
-
-	[SerializeField] public UnityEvent OnBreak;
 	
 	public enum CacheOptions
 	{
@@ -73,21 +73,22 @@ public class Meshinator : MonoBehaviour
 	// negated. If m_MaxForcePerImpact is less than or equal to m_ForceResistance, then no impact will ever
 	// deform this GameObject's mesh.
 	public float m_MaxForcePerImpact = 12f;
-	//乘以冲击力，以确定冲击爆炸等的深度
-//值表示密度较小的材质（因此变形较大），而较小的值表示
-//更致密的材料（从而减少变形）。
+	
+	// Multiplied by the force of an impact to determine the depth of an impact/explosion/etc. Higher
+	// values indicate less dense materials (and thus more deformation), while smaller values indicate
+	// more dense materials (and thus less deformation).
 	public float m_ForceMultiplier = 0.25f;
 	
 	// Is an impact currently being calculated? If so, we'll end up ignoring other Impact calls to prevent
 	// concurrent modifications to the mesh.
 	private bool m_Calculating = false;
 	
-	//这是缓存外壳对象，我们可以使用，也可以不使用，基于上面的设置cacheoptions。
+	// This is the cached Hull object that we may or may not use based on the set CacheOptions above.
 	private Hull m_Hull = null;
 	
-	//这些是用于引导网格变形的边界框，这样网格变形就不会收缩或展开
-//大小不合理。它们要么在开始时建立（如果cacheoptions.none），要么在第一个
-//collation（如果cacheoptions.cacheonload或cacheoptions.cacheaftercollision）。
+	// These are the bounding boxes used to guide the mesh deformation so that it doesn't contract or expand
+	// an unreasonable size. These are established either on Start (if CacheOptions.None), or on the first
+	// collsion (if CacheOptions.CacheOnLoad or CacheOptions.CacheAfterCollision).
 	private bool m_BoundsSet = false;
 	private Bounds m_InitialBounds;
 	
@@ -120,13 +121,10 @@ public class Meshinator : MonoBehaviour
 	
 	public void FixedUpdate()
 	{
-		//跟踪MyCeleReDeFraseCo是错误的时发生多少固定更新。
-
-//如果发生了足够多的fixedupdate调用，并且我们没有与任何内容冲突，那么
-
-//oncollisionenter函数将正常工作。这是为了防止副标题产生新的
-
-//gameobjects与碰撞器从一开始就重叠并导致不良行为。
+		// Keep track of how many FixedUpdates occur while m_ClearedForCollisions is false.
+		// If enough FixedUpdate calls have occurred and we have not collided with anything, then the 
+		// OnCollisionEnter function will the work normally. This is meant to prevent SubHulls creating new
+		// GameObjects with colliders that overlap from the start and cause bad behavior.
 		if (m_ClearedForCollisions == false)
 		{
 			if (m_CollisionCount != 0)
@@ -149,11 +147,16 @@ public class Meshinator : MonoBehaviour
 
 		if (m_ClearedForCollisions && collision.impactForceSum.magnitude >= m_ForceResistance)
 		{
-			// 找到撞击点
+		m_ColliderTimes++;
+		OnCollider?.Invoke(m_ColliderTimes);
+			if(m_ColliderTimes<m_TargetColliderTimes)
+			return;
+			// Find the impact point
 			foreach (ContactPoint contact in collision.contacts)
 			{
 				if (contact.otherCollider == collision.collider)
 				{
+
 					Impact(contact.point, collision.impactForceSum, m_ImpactShape, m_ImpactType);
 					break;
 				}
@@ -177,11 +180,11 @@ public class Meshinator : MonoBehaviour
 
 	public void Impact(Vector3 point, Vector3 force, ImpactShapes impactShape, ImpactTypes impactType)
 	{
-		// 看看我们现在能不能做到
+		// See if we can do this right now
 		if (!CanDoImpact(point, force))
 			return;
 
-		// 我们现在开始计算撞击变形
+		// We're now set on course to calculate the impact deformation
 		m_Calculating = true;
 		
 		// Set up m_Hull
@@ -203,13 +206,13 @@ public class Meshinator : MonoBehaviour
 		float impactForceY = Mathf.Max(Mathf.Min(impactForce.y, m_InitialBounds.extents.y), -m_InitialBounds.extents.y);
 		float impactForceZ = Mathf.Max(Mathf.Min(impactForce.z, m_InitialBounds.extents.z), -m_InitialBounds.extents.z);
 		impactForce = new Vector3(impactForceX, impactForceY, impactForceZ);
-		
+
 		// Run the mesh deformation on another thread
 		ThreadManager.RunAsync(()=>
 		{
 			// Do all the math to deform this mesh
 			m_Hull.Impact(impactPoint, impactForce, impactShape, impactType);
-			
+
 			// Queue the final mesh setting on the main thread once the deformations are done
 			ThreadManager.QueueOnMainThread(()=>
 			{
@@ -223,8 +226,6 @@ public class Meshinator : MonoBehaviour
 				
 				// Get the newly-adjusted Mesh so we can work with it
 				Mesh newMesh = m_Hull.GetMesh();
-				
-				
 				// If this is a fracture, then create a new GameObject for the chunk that broke off
 				if (impactType == ImpactTypes.Fracture)
 				{
@@ -233,17 +234,28 @@ public class Meshinator : MonoBehaviour
 					if (subHullMesh != null)
 					{
 						// Create the new GameObject
+					Destroy(gameObject.GetComponent<Outline>());
 						GameObject newGO = (GameObject)GameObject.Instantiate(gameObject);
+						//Debug.Log("Spawn");
 						try
 						{
-							Destroy(newGO.GetComponent<Movement>());
-							Destroy(newGO.GetComponent<StepCheck>());
-							Destroy(newGO.GetComponent<AutoSaver>());
+							Movement move;
+	 						 newGO.TryGetComponent<Movement>(out move);
+							  if(move)
+							  Destroy(move);
+							StepCheck check;	
+	 						 newGO.TryGetComponent<StepCheck>(out check);
+							  if(check)
+							  Destroy(check);
+							AutoSaver save;	
+	 						 newGO.TryGetComponent<AutoSaver>(out save);
+							  if(save)
+							  Destroy(save);
 						}
-						catch (Exception e)
+						catch
 						{
+
 						}
-			
 						// Set the new Mesh onto the MeshFilter and MeshCollider
 						MeshFilter newMeshFilter = newGO.GetComponent<MeshFilter>();
 						MeshCollider newMeshCollider = newGO.GetComponent<MeshCollider>();
@@ -285,6 +297,10 @@ public class Meshinator : MonoBehaviour
 							newGO.GetComponent<Rigidbody>().centerOfMass = subHullMesh.bounds.center;
 						}
 					}
+					else
+					{
+						gameObject.AddComponent<Broken>();
+					}
 				}
 				
 				// Set the hull's new mesh back onto this game object
@@ -302,11 +318,12 @@ public class Meshinator : MonoBehaviour
 				// Our calculations are done
 				m_Calculating = false;
 
+				Handheld.Vibrate();
+				OnBreak?.Invoke();
 			});
+
 		});
-		OnBreak?.Invoke();
-		Handheld.Vibrate();
-		GC.Collect();
+
 	}
 	
 	private void InitializeHull()
@@ -336,17 +353,17 @@ public class Meshinator : MonoBehaviour
 	
 	private bool CanDoImpact(Vector3 point, Vector3 force)
 	{
-		//如果我们已经在处理对FlatImpact的调用，我们将忽略
-		// 防止同时修改网格。
+		//If we are already handling a call to FlatImpact, we'll end up ignoring other Impact calls to
+		// prevent concurrent modifications to the mesh.
 		if (m_Calculating)
 			return false;
 
-		// 确保此力可以影响此对象
+		// Make sure this force can affect this object
 		float forceMagnitude = force.magnitude;
 		if (forceMagnitude - m_ForceResistance <= 0)
 			return false;
 		
-		// 计算出真实的冲击力，并确保它大于零
+		// Figure out the true impact force, and make sure it's greater than zero
 		float impactFactor = (forceMagnitude - m_ForceResistance) * m_ForceMultiplier;
 		if (impactFactor <= 0)
 			return false;

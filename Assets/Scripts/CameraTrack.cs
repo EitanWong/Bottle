@@ -9,6 +9,7 @@ public class CameraTrack : MonoBehaviour
     private CinemachineVirtualCamera v_Camera;
     private CinemachineComposer Composer;
 
+    private bool isTouch;
     [SerializeField]
    bool IsMainCamera;
  //   private CinemachineTransposer Transposer;
@@ -16,6 +17,7 @@ public class CameraTrack : MonoBehaviour
   private float OriginFieldOfView;
     private void Awake()
     {
+        //Input.multiTouchEnabled = true;//开启多点触碰
         v_Camera=GetComponent<CinemachineVirtualCamera>();
         Composer = v_Camera.GetCinemachineComponent<CinemachineComposer>();
       //  Transposer=v_Camera.GetCinemachineComponent<CinemachineTransposer>();
@@ -30,15 +32,20 @@ public class CameraTrack : MonoBehaviour
     }
     void Update ()
     {
-        if (Player)
-        {  if (!Player.m_Grounded)
-            {
-                if(v_Camera.m_Lens.FieldOfView<100)
-                    v_Camera.m_Lens.FieldOfView += Time.deltaTime*ChangeValue;
-            }
+
+        var Ismobie = Application.isMobilePlatform;
 
 
-            if (Player.m_Grounded&&v_Camera.m_Lens.FieldOfView > OriginFieldOfView)
+if(InputManager.INS)
+    isTouch= isTouch=InputManager.INS.m_LeftTouch;
+        if (isTouch)
+        {
+            if(v_Camera.m_Lens.FieldOfView<100)
+                v_Camera.m_Lens.FieldOfView += (v_Camera.m_Lens.FieldOfView*Time.deltaTime)+Time.deltaTime*ChangeValue;
+        }
+        else
+        {
+            if (v_Camera.m_Lens.FieldOfView > OriginFieldOfView)
             {
                 var value= Time.deltaTime*ChangeValue*5;
                 if (v_Camera.m_Lens.FieldOfView - value >= OriginFieldOfView)
@@ -51,10 +58,11 @@ public class CameraTrack : MonoBehaviour
                     v_Camera.m_Lens.FieldOfView = OriginFieldOfView;
                 }
             }
-            
         }
+
         
-        if (Application.isMobilePlatform)
+        
+        if (Ismobie)
         {
             if (Composer)
             {
@@ -94,5 +102,5 @@ public class CameraTrack : MonoBehaviour
     }
 
     public float ChangeValue;
-    public Movement Player;
+   // public Movement Player;
 }

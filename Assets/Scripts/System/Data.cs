@@ -21,8 +21,8 @@ public class Data
    public DateTime SaveDataTime;
    public bool IsNewDay;//新的一天
 
-   public int X_MultiplyInpputValue=3;
-   public int Y_MultiplyInpputValue=4;
+   public int X_MultiplyInpputValue=5;
+   public int Y_MultiplyInpputValue=10;
    public int Schedule=0;//游戏进度
    public bool UsePostProcessing;//使用后置处理
    public bool UseLimitFPS;//使用限制FPS
@@ -101,7 +101,7 @@ public class Data
       }
       else
       {
-         UpdateMultiplXValue(3);
+         UpdateMultiplXValue(5);
       }
       if (ES3.KeyExists(SN_MultiplY))
       {
@@ -111,7 +111,7 @@ public class Data
       }
       else
       {
-         UpdateMultiplYValue(4);
+         UpdateMultiplYValue(10);
       }
       if (ES3.KeyExists(SN_UsePost))
       {

@@ -31,9 +31,9 @@ public class CheckBreakPrice : MonoBehaviour
           {
               NowFragmentCount = 0;
               HasPrice?.Invoke();
-          }
-        StartCoroutine(SaveData());
-    }
+               }
+             StartCoroutine(SaveData());
+         }
 
     IEnumerator SaveData()
     {

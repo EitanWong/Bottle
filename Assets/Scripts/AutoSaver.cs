@@ -33,6 +33,10 @@ public class AutoSaver : MonoBehaviour
         if (ES3.KeyExists(TransSaveName))
         {
             m_Trans.position = ES3.Load<Vector3>(TransSaveName);
+            if(m_Trans.position.y<0)
+            {
+                m_Trans.position=new Vector3(m_Trans.position.x,1,m_Trans.position.z);
+            }
         }
 
         if (ES3.KeyExists(MeshSaveName))

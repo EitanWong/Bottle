@@ -14,7 +14,6 @@
             <e p="Tempo Information.txt" t="Include" />
           </e>
         </e>
-        <e p="BackBlur.shader" t="Include" />
         <e p="Easy Save 2" t="Include">
           <e p="changelog.txt" t="Include" />
           <e p="ES2Init.cs" t="Include" />
@@ -45,12 +44,6 @@
             <e p="ES2_Sprite.cs" t="Include" />
           </e>
         </e>
-        <e p="GemExample" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="DemoTimeOfDay.cs" t="Include" />
-            <e p="Orbit.cs" t="Include" />
-          </e>
-        </e>
         <e p="Model" t="Include">
           <e p="_Flashlight PRO" t="Include">
             <e p="_Assets" t="Include">
@@ -64,6 +57,51 @@
           </e>
         </e>
         <e p="OtherPackage" t="Include">
+          <e p="_MK" t="Include">
+            <e p="MKGlassFree" t="Include">
+              <e p="Editor" t="Include">
+                <e p="MKGlassFreeEditor.cs" t="Include" />
+              </e>
+              <e p="MKGlassFreeMaterialHelper.cs" t="Include" />
+              <e p="Shader" t="Include">
+                <e p="Inc" t="Include">
+                  <e p="Common" t="Include">
+                    <e p="MKGlassDef.cginc" t="Include" />
+                    <e p="MKGlassInc.cginc" t="Include" />
+                    <e p="MKGlassLight.cginc" t="Include" />
+                    <e p="MKGlassV.cginc" t="Include" />
+                  </e>
+                  <e p="Forward" t="Include">
+                    <e p="MKGlassForward.cginc" t="Include" />
+                    <e p="MKGlassForwardAddSetup.cginc" t="Include" />
+                    <e p="MKGlassForwardBaseSetup.cginc" t="Include" />
+                    <e p="MKGlassForwardIO.cginc" t="Include" />
+                  </e>
+                  <e p="Meta" t="Include">
+                    <e p="MKGlassMeta.cginc" t="Include" />
+                    <e p="MKGlassMetaIO.cginc" t="Include" />
+                    <e p="MKGlassMetaSetup.cginc" t="Include" />
+                  </e>
+                  <e p="Surface" t="Include">
+                    <e p="MKGlassSurface.cginc" t="Include" />
+                    <e p="MKGlassSurfaceIO.cginc" t="Include" />
+                  </e>
+                  <e p="VertexLit" t="Include">
+                    <e p="MKGlassVertexLit.cginc" t="Include" />
+                    <e p="MKGlassVertexLitIO.cginc" t="Include" />
+                    <e p="MKGlassVertexLitSetup.cginc" t="Include" />
+                  </e>
+                </e>
+                <e p="MKGlassCommonFree.shader" t="Include" />
+                <e p="MKGlassFree.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Breakable Windows" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BreakableWindow.cs" t="Include" />
+            </e>
+          </e>
           <e p="DreamStarGenerator" t="Include">
             <e p="Materials" t="Include">
               <e p="Shader" t="Include">
@@ -102,6 +140,12 @@
           <e p="Gem" t="Include">
             <e p="Shaders" t="Include">
               <e p="Gem.shader" t="Include" />
+            </e>
+          </e>
+          <e p="GemExample" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DemoTimeOfDay.cs" t="Include" />
+              <e p="Orbit.cs" t="Include" />
             </e>
           </e>
           <e p="Meshinator" t="Include">
@@ -674,10 +718,17 @@
             <e p="Outline.cs" t="Include" />
           </e>
         </e>
+        <e p="ScreenFX" t="Include">
+          <e p="BlurBox.shader" t="Include" />
+          <e p="GaussianBlur.cs" t="Include" />
+          <e p="GaussianBlur.shader" t="Include" />
+          <e p="ImageEffect_BlurBox.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="AudioPlayer.cs" t="Include" />
           <e p="AudioTrigger.cs" t="Include" />
           <e p="AutoSaver.cs" t="Include" />
+          <e p="Broken.cs" t="Include" />
           <e p="CameraTrack.cs" t="Include" />
           <e p="CheckBreakPrice.cs" t="Include" />
           <e p="CheckHeight.cs" t="Include" />
