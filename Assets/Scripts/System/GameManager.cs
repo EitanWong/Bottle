@@ -127,6 +127,20 @@ public class GameManager : MonoBehaviour
     private void OnGUI()
     {
         GUI.Label(new Rect(10, 30, 200, 200), Input.acceleration.ToString());
-        GUI.Label(new Rect(10, 70, 200, 200),GameData.IsNewDay.ToString());
+        GUI.Label(new Rect(10, 70, 200, 200), GameData.IsNewDay.ToString());
+
+        switch (Application.internetReachability)
+        {
+            case NetworkReachability.ReachableViaLocalAreaNetwork:
+                GUI.Label(new Rect(10, 120, 200, 200), "当前使用的是：WiFi");
+                break;
+            case NetworkReachability.ReachableViaCarrierDataNetwork:
+                GUI.Label(new Rect(10, 120, 200, 200), "当前使用的是移动网络");
+                break;
+            default:
+                GUI.Label(new Rect(10, 120, 200, 200), "当前没有联网");
+                break;
+
+        }
     }
 }

@@ -211,11 +211,7 @@ public class Movement : MonoBehaviour
     {
         if (isSidecollider)
         {
-            m_rig.drag = -2;
-        }
-        else
-        {
-            m_rig.drag = 0;
+            m_rig.velocity+=Vector3.up*Physics.gravity.y*Time.deltaTime;
         }
 
     }
